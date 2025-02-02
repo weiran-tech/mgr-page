@@ -1,0 +1,40 @@
+{
+    "name" : "poppy/mgr-page",
+    "description" : "An admin management page module.",
+    "license" : "Apache-2.0",
+    "authors" : [
+        {
+            "name" : "Mark Zhao",
+            "email" : "zhaody901@126.com"
+        }
+    ],
+    "require" : {
+        "php": "^8.1",
+        "ext-json" : "*",
+        "mews/captcha" : "^3.3",
+        "poppy/system" : "10.0.x-dev"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Poppy\\MgrPage\\" : "src/"
+        },
+        "files" : [
+            "src/Support/functions.php"
+        ]
+    },
+    "autoload-dev" : {
+        "psr-4" : {
+            "Poppy\\MgrPage\\Tests\\" : "tests/"
+        }
+    },
+    "config" : {
+        "preferred-install" : "dist",
+        "sort-packages": true
+    },
+    "laravel" : {
+        "aliases" : {
+            "Form" : "Poppy\\MgrPage\\Facade\\FormFacade"
+        }
+    },
+    "minimum-stability" : "dev"
+}

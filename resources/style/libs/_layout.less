@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+/*
+|--------------------------------------------------------------------------
+| 组件的布局文件
+|--------------------------------------------------------------------------
+| - paddings, margins
+| - width   12 的倍数  12 ->  1200
+| - clearfix
+| - position
+| - ellipsis
+*/
+
+/* paddings , margins
+ -------------------------------------------- */
+
+._loopMarginPadding(@counter) when (@counter >= 0) {
+	._loopMarginPadding((@counter - 1));
+
+	/* Margin
+	 * ---------------------------------------- */
+	.mg@{counter} {
+		margin: (1px * @counter) !important;
+	}
+	.mt@{counter} {
+		margin-top: (1px * @counter) !important;
+	}
+	.mr@{counter} {
+		margin-right: (1px * @counter) !important;
+	}
+	.ml@{counter} {
+		margin-left: (1px * @counter) !important;
+	}
+	.mb@{counter} {
+		margin-bottom: (1px * @counter) !important;
+	}
+
+	.pd@{counter} {
+		padding: (1px * @counter) !important;
+	}
+	.pt@{counter} {
+		padding-top: (1px * @counter) !important;
+	}
+	.pr@{counter} {
+		padding-right: (1px * @counter) !important;
+	}
+	.pl@{counter} {
+		padding-left: (1px * @counter) !important;
+	}
+	.pb@{counter} {
+		padding-bottom: (1px * @counter) !important;
+	}
+}
+
+
+/* 宽度 12x
+ * ---------------------------------------- */
+._loopWidth12(@counter) when (@counter >= 0) {
+	._loopWidth12((@counter - 12));
+	.w@{counter} {
+		width: (1px * @counter) !important;
+	}
+}
+
+._loopWidthPercent(@counter) when (@counter >= 0) {
+	._loopWidthPercent((@counter - 1));
+	.w@{counter}p {
+		width: (1% * @counter) !important;
+	}
+}
+
+._loopMarginPadding(20);
+._loopWidth12(1200);
+._loopWidthPercent(100);
+/* clearfix
+ -------------------------------------------- */
+.clearfix {
+	*zoom: 1;
+
+	&:before, &:after {
+		display: table;
+		content: "";
+		line-height: 0;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+/* position  定位
+ -------------------------------------------- */
+.fl, .pull-left {
+	float: left;
+}
+
+.fr, .pull-right {
+	float: right;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.visible {
+	visibility: visible;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+/* border [(Mark Zhao) 2014/11/21]
+------------------------------------------------------ */
+.bd-none {
+	border: none !important;
+}
+
+.bdb-none {
+	border-bottom: none !important;
+}
+
+.bdt-none {
+	border-top: none !important;
+}
+
+.bdl-none {
+	border-left: none !important;
+}
+
+.bdr-none {
+	border-right: none !important;
+}
+
+/* 常用文本功能
+ * ---------------------------------------- */
+.text-monospace {
+	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.text-justify {
+	text-align: justify !important;
+}
+
+.text-nowrap {
+	white-space: nowrap !important;
+}
+
+.text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.text-lowercase {
+	text-transform: lowercase !important;
+}
+
+.text-uppercase {
+	text-transform: uppercase !important;
+}
+
+.text-capitalize {
+	text-transform: capitalize !important;
+}
+
+.text-italic {
+	font-style: italic !important;
+}
+
+/* 超出范围省略号
+ -------------------------------------------- */
+.text-ellipsis, .text-ellipsis li, .text-ellipsis a {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-break: keep-all;
+}
