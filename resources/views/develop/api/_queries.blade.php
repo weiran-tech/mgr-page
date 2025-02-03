@@ -16,7 +16,7 @@
                     { {!! $param->size !!} }
                 @endif
                 @if(isset($param->allowedValues))
-                    { {!! \Poppy\Framework\Helper\ArrayHelper::combine($param->allowedValues) !!} }
+                    { {!! \Weiran\Framework\Helper\ArrayHelper::combine($param->allowedValues) !!} }
                 @endif
             </span>
             {!! Form::text($param->field, null, ['class' => 'layui-input layui-input-sm J_calc', 'id'=> 'field_'.$param->field]) !!}

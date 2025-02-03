@@ -5,7 +5,7 @@ namespace Weiran\MgrPage\Http;
 use Illuminate\Routing\Router;
 use Route;
 
-class RouteServiceProvider extends \Poppy\Framework\Application\RouteServiceProvider
+class RouteServiceProvider extends \Weiran\Framework\Application\RouteServiceProvider
 {
     /**
      * Define your route model bindings, pattern filters, etc.

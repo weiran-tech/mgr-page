@@ -58,7 +58,7 @@
         </li>
         <li class="layui-nav-item" lay-unselect style="min-width: 100px;">
             <a href="#" class="J_ignore">
-                <cite>{{ Poppy\Framework\Helper\StrHelper::hideContact( $_pam->username, 2, -2, '***' ) ?? ''}}</cite>
+                <cite>{{ Weiran\Framework\Helper\StrHelper::hideContact( $_pam->username, 2, -2, '***' ) ?? ''}}</cite>
                 <span class="layui-nav-more"></span>
             </a>
             <dl class="layui-nav-child">
