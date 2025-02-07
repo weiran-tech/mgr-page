@@ -16,7 +16,7 @@
     },
     "autoload" : {
         "psr-4" : {
-            "Poppy\\MgrPage\\" : "src/"
+            "Weiran\\MgrPage\\" : "src/"
         },
         "files" : [
             "src/Support/functions.php"
@@ -24,7 +24,7 @@
     },
     "autoload-dev" : {
         "psr-4" : {
-            "Poppy\\MgrPage\\Tests\\" : "tests/"
+            "Weiran\\MgrPage\\Tests\\" : "tests/"
         }
     },
     "config" : {
@@ -33,7 +33,7 @@
     },
     "laravel" : {
         "aliases" : {
-            "Form" : "Poppy\\MgrPage\\Facade\\FormFacade"
+            "Form" : "Weiran\\MgrPage\\Facade\\FormFacade"
         }
     },
     "minimum-stability" : "dev"
