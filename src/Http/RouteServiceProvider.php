@@ -30,7 +30,7 @@ class RouteServiceProvider extends \Weiran\Framework\Application\RouteServicePro
         // backend
         Route::group([
             'prefix'    => $this->prefix,
-            'namespace' => 'Poppy\MgrPage\Http\Request\Backend',
+            'namespace' => 'Weiran\MgrPage\Http\Request\Backend',
         ], function (Router $router) {
             $router->any('/', 'HomeController@index')
                 ->middleware('backend-auth')

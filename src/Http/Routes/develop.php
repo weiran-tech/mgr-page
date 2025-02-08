@@ -4,7 +4,7 @@ use Illuminate\Routing\Router;
 
 
 Route::group([
-    'namespace' => 'Poppy\MgrPage\Http\Request\Develop',
+    'namespace' => 'Weiran\MgrPage\Http\Request\Develop',
 ], function (Router $router) {
     /* Pam
      * ---------------------------------------- */

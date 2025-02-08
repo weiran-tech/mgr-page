@@ -3,7 +3,7 @@
 use Illuminate\Routing\Router;
 
 Route::group([
-    'namespace' => 'Poppy\MgrPage\Http\Request\Backend',
+    'namespace' => 'Weiran\MgrPage\Http\Request\Backend',
 ], function (Router $router) {
     $router->any('cp', 'HomeController@cp')
         ->name('py-mgr-page:backend.home.cp');
