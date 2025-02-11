@@ -8,14 +8,14 @@ namespace Weiran\MgrPage;
 use Illuminate\Console\Scheduling\Schedule;
 use Weiran\Framework\Events\PoppySchedule;
 use Weiran\Framework\Exceptions\ModuleNotFoundException;
-use Weiran\Framework\Support\PoppyServiceProvider;
+use Weiran\Framework\Support\WeiranServiceProvider;
 use Weiran\MgrPage\Classes\FormBuilder;
 use Weiran\MgrPage\Commands\MixCommand;
 
 /**
  * @property $listens;
  */
-class ServiceProvider extends PoppyServiceProvider
+class ServiceProvider extends WeiranServiceProvider
 {
 
     /**
