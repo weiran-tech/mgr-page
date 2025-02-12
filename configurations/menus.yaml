@@ -9,22 +9,22 @@ backend :
         -
           title : 主页
           icon : 'bi bi-house'
-          route : wr-mgr-page:backend.home.cp
+          route : weiran-mgr-page:backend.home.cp
         -
           title : 配置
           icon : 'bi bi-sliders'
           children :
             -
               title : 系统配置
-              route : wr-mgr-page:backend.home.setting
+              route : weiran-mgr-page:backend.home.setting
               permission : backend:py-system.global.manage
             -
               title : 邮件设置
-              route : wr-mgr-page:backend.mail.store
+              route : weiran-mgr-page:backend.mail.store
               permission : backend:py-system.global.manage
             -
               title : 上传设置
-              route : wr-mgr-page:backend.upload.store
+              route : weiran-mgr-page:backend.upload.store
               permission : backend:py-system.global.manage
         -
           title : 账号管理
@@ -32,23 +32,23 @@ backend :
           children :
             -
               title : 角色管理
-              route : wr-mgr-page:backend.role.index
+              route : weiran-mgr-page:backend.role.index
               param :
                 _scope : 'user'
               permission : backend:py-system.role.manage
             -
               title : 账号管理
-              route : wr-mgr-page:backend.pam.index
+              route : weiran-mgr-page:backend.pam.index
               param :
                 _scope : 'user'
               permission : backend:py-system.pam.manage
             -
               title : 登录日志
-              route : wr-mgr-page:backend.pam.log
+              route : weiran-mgr-page:backend.pam.log
               permission : backend:py-system.pam.log
             -
               title : 风险拦截
-              route : wr-mgr-page:backend.ban.index
+              route : weiran-mgr-page:backend.ban.index
               param :
                 _scope : 'user'
               permission : backend:py-system.pam.manage
@@ -60,13 +60,13 @@ develop :
       children :
         -
           title : 系统日志
-          route : wr-mgr-page:develop.log.index
+          route : weiran-mgr-page:develop.log.index
         -
           title : PhpInfo
-          route : wr-mgr-page:develop.env.phpinfo
+          route : weiran-mgr-page:develop.env.phpinfo
         -
           title : 数据库字典
-          route : wr-mgr-page:develop.env.db
+          route : weiran-mgr-page:develop.env.db
         -
           title : 数据库查询监控
           route : wr-mgr-page:develop.home.optimize
