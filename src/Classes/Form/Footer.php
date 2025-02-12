@@ -12,7 +12,7 @@ class Footer implements Renderable
 	 *
 	 * @var string
 	 */
-	protected $view = 'wr-mgr-page::tpl.form.footer';
+	protected $view = 'weiran-mgr-page::tpl.form.footer';
 
 	/**
 	 * Form builder instance.

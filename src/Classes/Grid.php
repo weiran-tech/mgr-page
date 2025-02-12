@@ -143,7 +143,7 @@ class Grid
      *
      * @var string
      */
-    protected string $view = 'wr-mgr-page::tpl.grid.table';
+    protected string $view = 'weiran-mgr-page::tpl.grid.table';
 
     /**
      * @var []callable

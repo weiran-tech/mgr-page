@@ -1,4 +1,4 @@
-@extends('py-mgr-page::tpl.default')
+@extends('weiran-mgr-page::tpl.default')
 @section('head-css')
     {!! Html::style('assets/libs/layui/css/layui.css') !!}
 @endsection
@@ -9,7 +9,7 @@
     @endif
 @endsection
 @section('body-main')
-    @include('py-mgr-page::tpl._toastr')
+    @include('weiran-mgr-page::tpl._toastr')
     @if ($total > 0)
         <div class="layui-elem-quote mt10" style="{!! $left === 0 ? 'color:green' : ''!!}">
             <p>

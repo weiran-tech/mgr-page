@@ -54,8 +54,8 @@ class HomeController extends BackendController
         $host = StrHelper::formatId(EnvHelper::host()) . '-backend';
         $name = sys_setting('wr-system::site.name');
         $logo = sys_setting('wr-system::site.logo');
-        $main = route('py-mgr-page:backend.home.cp', [], false);
-        return view('py-mgr-page::backend.home.index', [
+        $main = route('weiran-mgr-page:backend.home.cp', [], false);
+        return view('weiran-mgr-page::backend.home.index', [
             'host' => $host,
             'logo' => $logo,
             'name' => $name,
@@ -100,16 +100,16 @@ class HomeController extends BackendController
             if ($loginSuccess) {
                 $this->setSessionLifetime($Pam->getPam());
                 $this->setRememberTokenExpired();
-                return Resp::success('登录成功', '_location|' . route('py-mgr-page:backend.home.index'));
+                return Resp::success('登录成功', '_location|' . route('weiran-mgr-page:backend.home.index'));
             }
             return Resp::error($Pam->getError());
         }
 
         if ($auth->check()) {
-            return Resp::success('登录成功', '_location|' . route('py-mgr-page:backend.home.index'));
+            return Resp::success('登录成功', '_location|' . route('weiran-mgr-page:backend.home.index'));
         }
 
-        return view('py-mgr-page::backend.home.login');
+        return view('weiran-mgr-page::backend.home.login');
     }
 
     /**
@@ -145,7 +145,7 @@ class HomeController extends BackendController
         // todo 退出后台清空 session 会导致其他用户失效
         app('session.store')->flush();
 
-        return Resp::success('退出登录', '_location|' . route('py-mgr-page:backend.home.login'));
+        return Resp::success('退出登录', '_location|' . route('weiran-mgr-page:backend.home.login'));
     }
 
     /**
@@ -154,7 +154,7 @@ class HomeController extends BackendController
      */
     public function cp()
     {
-        return view('py-mgr-page::backend.home.cp');
+        return view('weiran-mgr-page::backend.home.cp');
     }
 
     /**
@@ -175,7 +175,7 @@ class HomeController extends BackendController
     public function easyWeb(string $type)
     {
         $host = StrHelper::formatId(EnvHelper::host());
-        return view('py-mgr-page::backend.home.easyweb.' . $type, [
+        return view('weiran-mgr-page::backend.home.easyweb.' . $type, [
             'host' => $host,
         ]);
     }

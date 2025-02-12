@@ -99,7 +99,7 @@ class TableWidget extends Widget implements Renderable
             ]);
         }
 
-        $content = view('py-mgr-page::tpl.widgets.table', [
+        $content = view('weiran-mgr-page::tpl.widgets.table', [
             'headers'    => $this->headers,
             'rows'       => $this->rows,
         ])->render();

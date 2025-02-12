@@ -11,7 +11,7 @@ class Lte extends FilterItem
     /**
      * @inheritDoc
      */
-    protected string $view = 'py-mgr-page::tpl.filter.lte';
+    protected string $view = 'weiran-mgr-page::tpl.filter.lte';
 
     /**
      * Get condition of this filter.

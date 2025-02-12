@@ -69,4 +69,4 @@ develop :
           route : weiran-mgr-page:develop.env.db
         -
           title : 数据库查询监控
-          route : wr-mgr-page:develop.home.optimize
+          route : weiran-mgr-page:develop.home.optimize

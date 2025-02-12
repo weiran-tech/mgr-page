@@ -12,7 +12,7 @@ class QuickSearch extends AbstractTool
     /**
      * @var string
      */
-    protected $view = 'py-mgr-page::tpl.grid.quick-search';
+    protected $view = 'weiran-mgr-page::tpl.grid.quick-search';
 
     /**
      * @var string

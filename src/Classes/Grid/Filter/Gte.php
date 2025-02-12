@@ -11,7 +11,7 @@ class Gte extends FilterItem
     /**
      * @inheritDoc
      */
-    protected string $view = 'py-mgr-page::tpl.filter.gte';
+    protected string $view = 'weiran-mgr-page::tpl.filter.gte';
 
     /**
      * Get condition of this filter.

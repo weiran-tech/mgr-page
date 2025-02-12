@@ -1,4 +1,4 @@
-@extends('py-mgr-page::tpl.mail')
+@extends('weiran-mgr-page::tpl.mail')
 @section('mail-main')
     <h3>函数</h3>
     <table class="table-inner">

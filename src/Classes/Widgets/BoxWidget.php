@@ -88,7 +88,7 @@ class BoxWidget extends Widget implements Renderable
      */
     public function render()
     {
-        return view('py-mgr-page::tpl.widgets.box', $this->variables())->render();
+        return view('weiran-mgr-page::tpl.widgets.box', $this->variables())->render();
     }
 
     /**

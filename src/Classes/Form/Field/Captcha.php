@@ -8,5 +8,5 @@ use Weiran\MgrPage\Classes\Form\Field;
 
 class Captcha extends Field
 {
-    protected string $view = 'py-mgr-page::tpl.form.captcha';
+    protected string $view = 'weiran-mgr-page::tpl.form.captcha';
 }

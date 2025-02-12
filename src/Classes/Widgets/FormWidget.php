@@ -501,7 +501,7 @@ class FormWidget implements Renderable
             return $this->sanitize()->handle($request);
         }
 
-        $form = view('py-mgr-page::tpl.widgets.form', $this->getVariables())->render();
+        $form = view('weiran-mgr-page::tpl.widgets.form', $this->getVariables())->render();
 
         if (!$this->inbox || !($title = $this->title())) {
             if ($this->withContent) {

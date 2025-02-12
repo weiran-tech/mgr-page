@@ -24,7 +24,7 @@ class EnvController extends DevelopController
      */
     public function phpinfo(): Factory|View
     {
-        return view('py-mgr-page::develop.env.phpinfo');
+        return view('weiran-mgr-page::develop.env.phpinfo');
     }
 
     /**
@@ -126,7 +126,7 @@ class EnvController extends DevelopController
             $formatTables[$table] = $formatColumns;
         }
 
-        return view('py-mgr-page::develop.env.db', [
+        return view('weiran-mgr-page::develop.env.db', [
             'items' => $formatTables,
         ]);
     }

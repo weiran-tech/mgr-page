@@ -72,7 +72,7 @@ class Selector implements Renderable
      */
     public function render()
     {
-        return view('py-mgr-page::tpl.grid.selector', [
+        return view('weiran-mgr-page::tpl.grid.selector', [
             'selectors' => $this->selectors,
             'selected'  => static::parseSelected(),
         ]);

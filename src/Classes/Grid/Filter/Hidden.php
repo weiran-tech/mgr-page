@@ -15,7 +15,7 @@ class Hidden extends FilterItem
     /**
      * @var string
      */
-    protected string $view = 'py-mgr-page::tpl.filter.hidden';
+    protected string $view = 'weiran-mgr-page::tpl.filter.hidden';
 
 
     public function value($value): self

@@ -857,7 +857,7 @@ class Field implements Renderable
 
         $class = explode('\\', static::class);
 
-        return 'py-mgr-page::tpl.form.' . Str::kebab(end($class));
+        return 'weiran-mgr-page::tpl.form.' . Str::kebab(end($class));
     }
 
     /**

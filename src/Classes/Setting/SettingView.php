@@ -41,7 +41,7 @@ class SettingView
                 return $cur->render();
             }
 
-            return view('py-mgr-page::backend.tpl.settings', [
+            return view('weiran-mgr-page::backend.tpl.settings', [
                 'hooks' => $groupHook,
                 'forms' => $forms,
                 'index' => $index,

@@ -41,7 +41,7 @@ class LogController extends DevelopController
 
         $logs = LogViewer::all();
 
-        return view('py-mgr-page::develop.log.index', [
+        return view('weiran-mgr-page::develop.log.index', [
             'logs'         => $logs,
             'files'        => LogViewer::getFiles(true),
             'current_file' => LogViewer::getFileName(),

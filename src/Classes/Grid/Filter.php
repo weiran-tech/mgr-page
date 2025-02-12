@@ -118,7 +118,7 @@ class Filter
     /**
      * @var string
      */
-    protected string $view = 'py-mgr-page::tpl.filter.container';
+    protected string $view = 'weiran-mgr-page::tpl.filter.container';
 
     /**
      * @var string

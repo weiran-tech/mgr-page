@@ -84,7 +84,7 @@ class Row implements Renderable
      */
     public function render()
     {
-        return view('wr-mgr-page::tpl.form.row', ['fields' => $this->fields]);
+        return view('weiran-mgr-page::tpl.form.row', ['fields' => $this->fields]);
     }
 
     /**

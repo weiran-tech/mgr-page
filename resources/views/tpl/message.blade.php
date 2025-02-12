@@ -1,4 +1,4 @@
-@extends('py-mgr-page::backend.tpl.default')
+@extends('weiran-mgr-page::backend.tpl.default')
 @section('head-css')
     {!! Html::style('assets/libs/boot/style.css') !!}
     {!! Html::script('assets/libs/boot/vendor.min.js') !!}

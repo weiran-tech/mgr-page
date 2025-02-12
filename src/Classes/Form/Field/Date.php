@@ -19,7 +19,7 @@ class Date extends Field
         'style' => 'width: 110px',
     ];
 
-    protected string $view = 'py-mgr-page::tpl.form.date';
+    protected string $view = 'weiran-mgr-page::tpl.form.date';
 
     public function render()
     {

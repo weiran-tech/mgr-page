@@ -106,7 +106,7 @@ class RoleController extends BackendController
         });
 
 
-        return view('py-mgr-page::backend.role.menu', [
+        return view('weiran-mgr-page::backend.role.menu', [
             'permission' => $groupedPermission,
             'role'       => $role,
         ]);

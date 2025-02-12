@@ -9,19 +9,19 @@ Route::group([
     /* Pam
      * ---------------------------------------- */
     $router->any('/', 'HomeController@index')
-        ->name('wr-mgr-page:develop.home.cp');
+        ->name('weiran-mgr-page:develop.home.cp');
     $router->any('optimize', 'HomeController@optimize')
-        ->name('wr-mgr-page:develop.home.optimize');
+        ->name('weiran-mgr-page:develop.home.optimize');
 
     /* Env
      * ---------------------------------------- */
     $router->get('env/phpinfo', 'EnvController@phpinfo')
-        ->name('wr-mgr-page:develop.env.phpinfo');
+        ->name('weiran-mgr-page:develop.env.phpinfo');
     $router->get('env/db', 'EnvController@db')
-        ->name('wr-mgr-page:develop.env.db');
+        ->name('weiran-mgr-page:develop.env.db');
 
     /* Log
      * ---------------------------------------- */
     $router->any('log', 'LogController@index')
-        ->name('wr-mgr-page:develop.log.index');
+        ->name('weiran-mgr-page:develop.log.index');
 });

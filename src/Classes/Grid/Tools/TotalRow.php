@@ -101,6 +101,6 @@ class TotalRow extends AbstractTool
             ];
         });
 
-        return view('py-mgr-page::tpl.grid.total-row', compact('columns'));
+        return view('weiran-mgr-page::tpl.grid.total-row', compact('columns'));
     }
 }

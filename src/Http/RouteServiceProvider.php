@@ -34,13 +34,13 @@ class RouteServiceProvider extends \Weiran\Framework\Application\RouteServicePro
         ], function (Router $router) {
             $router->any('/', 'HomeController@index')
                 ->middleware('backend-auth')
-                ->name('wr-mgr-page:backend.home.index');
+                ->name('weiran-mgr-page:backend.home.index');
             $router->any('login', 'HomeController@login')
                 ->middleware('web')
-                ->name('wr-mgr-page:backend.home.login');
+                ->name('weiran-mgr-page:backend.home.login');
             $router->any('captcha/send', 'CaptchaController@send')
                 ->middleware('web')
-                ->name('wr-mgr-page:backend.captcha.send');
+                ->name('weiran-mgr-page:backend.captcha.send');
         });
 
         Route::group([
@@ -64,7 +64,7 @@ class RouteServiceProvider extends \Weiran\Framework\Application\RouteServicePro
             'prefix'     => $this->prefix . '/develop',
         ], function (Router $router) {
             $router->any('api/json/{type?}', 'Poppy\MgrPage\Http\Request\Develop\ApiController@json')
-                ->name('wr-mgr-page:develop.api.json');
+                ->name('weiran-mgr-page:develop.api.json');
         });
         Route::group([
             'middleware' => 'backend-auth',

@@ -18,7 +18,7 @@ class SearchCache
     public static function py(string $text): string
     {
         static $pinyin;
-        $Rds = sys_tag('wr-mgr-page');
+        $Rds = sys_tag('weiran-mgr-page');
         if (class_exists(Pinyin::class)) {
             if ($py = $Rds->hget(PyMgrPageDef::ckSearchPy(), $text)) {
                 return $py;

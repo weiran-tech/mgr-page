@@ -36,7 +36,7 @@ class ListPamBan extends ListBase
         $this->addColumn(Column::NAME_ACTION, '操作')->displayUsing(Actions::class, [function (Actions $actions) {
             /** @var PamBan $item */
             $item = $actions->row;
-            $actions->delete(route('wr-mgr-page:backend.ban.delete', [$item->id]), $item->type . $item->value);
+            $actions->delete(route('weiran-mgr-page:backend.ban.delete', [$item->id]), $item->type . $item->value);
         },])->fixed()->width(70);
     }
 
@@ -61,7 +61,7 @@ class ListPamBan extends ListBase
         $type = input(Scope::QUERY_NAME, PamAccount::TYPE_USER);
         return function (Operations $operations) use ($type) {
             $status = sys_setting('wr-system::ban.status-' . $type, SysConfig::STR_NO);
-            $url    = route_url('wr-mgr-page:backend.ban.status', null, ['type' => $type,]);
+            $url    = route_url('weiran-mgr-page:backend.ban.status', null, ['type' => $type,]);
             if ($status === 'Y') {
                 $operations->disable($url, '风险拦截');
             }
@@ -70,7 +70,7 @@ class ListPamBan extends ListBase
             }
 
             $isBlack = sys_setting('wr-system::ban.type-' . $type, PamBan::WB_TYPE_BLACK) === PamBan::WB_TYPE_BLACK;
-            $url     = route_url('wr-mgr-page:backend.ban.type', null, ['type' => $type,]);
+            $url     = route_url('weiran-mgr-page:backend.ban.type', null, ['type' => $type,]);
             if ($isBlack) {
                 $operations->request('黑名单模式', $url)->icon('pause-circle')->tooltip('当前黑名单, 点击切换到白名单')->sm()
                     ->confirm('当前黑名单, 是否切换到白名单?')->danger();
@@ -79,8 +79,8 @@ class ListPamBan extends ListBase
                 $operations->request('白名单模式', $url)->icon('play-circle')->tooltip('当前白名单, 点击切换到黑名单')->sm()
                     ->confirm('当前白名单, 是否切换到黑名单?');
             }
-            $operations->create(route_url('wr-mgr-page:backend.ban.establish', null, ['type' => $type,]), '新增');
-            $operations->setting(route_url('wr-mgr-page:backend.ban.setting', null, ['type' => $type,]));
+            $operations->create(route_url('weiran-mgr-page:backend.ban.establish', null, ['type' => $type,]), '新增');
+            $operations->setting(route_url('weiran-mgr-page:backend.ban.setting', null, ['type' => $type,]));
         };
     }
 }

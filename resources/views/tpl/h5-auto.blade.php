@@ -1,5 +1,5 @@
 {{--自适应布局--}}
-@extends('py-mgr-page::tpl.default')
+@extends('weiran-mgr-page::tpl.default')
 @section('title')
     {!! $_title ?? '' !!}
 @endsection

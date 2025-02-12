@@ -11,7 +11,7 @@ class Between extends FilterItem
     /**
      * @inheritDoc
      */
-    protected string $view = 'py-mgr-page::tpl.filter.between';
+    protected string $view = 'weiran-mgr-page::tpl.filter.between';
 
     /**
      * Format id.

@@ -9,7 +9,7 @@ class Gt extends FilterItem
     /**
      * @inheritDoc
      */
-    protected string $view = 'py-mgr-page::tpl.filter.gt';
+    protected string $view = 'weiran-mgr-page::tpl.filter.gt';
 
     /**
      * Get condition of this filter.

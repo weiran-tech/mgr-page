@@ -160,9 +160,9 @@ class Content implements Renderable
             'content'     => $this->build(),
         ];
 
-        // 这里的显示依赖于 py-mgr-page
+        // 这里的显示依赖于 weiran-mgr-page
         // 因为只是后台, 所以提取一个给后边用
-        return view('py-mgr-page::tpl.layout.content', $variables)->render();
+        return view('weiran-mgr-page::tpl.layout.content', $variables)->render();
     }
 
     /**

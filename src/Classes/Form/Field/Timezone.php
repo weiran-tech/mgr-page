@@ -8,7 +8,7 @@ use DateTimeZone;
 
 class Timezone extends Select
 {
-    protected string $view = 'py-mgr-page::tpl.form.select';
+    protected string $view = 'weiran-mgr-page::tpl.form.select';
 
     public function render()
     {

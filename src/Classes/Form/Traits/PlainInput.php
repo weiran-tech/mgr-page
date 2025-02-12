@@ -10,7 +10,7 @@ trait PlainInput
     protected function initPlainInput(): void
     {
         if (empty($this->view)) {
-            $this->view = 'py-mgr-page::tpl.form.input';
+            $this->view = 'weiran-mgr-page::tpl.form.input';
         }
     }
 

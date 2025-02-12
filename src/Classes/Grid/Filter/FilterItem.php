@@ -87,7 +87,7 @@ abstract class FilterItem
     /**
      * @var string
      */
-    protected string $view = 'py-mgr-page::tpl.filter.where';
+    protected string $view = 'weiran-mgr-page::tpl.filter.where';
 
 
     /**

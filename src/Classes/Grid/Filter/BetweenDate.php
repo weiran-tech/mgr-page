@@ -12,7 +12,7 @@ class BetweenDate extends FilterItem
     /**
      * @inheritDoc
      */
-    protected string $view = 'py-mgr-page::tpl.filter.between_date';
+    protected string $view = 'weiran-mgr-page::tpl.filter.between_date';
 
 
     protected bool $withTime = false;

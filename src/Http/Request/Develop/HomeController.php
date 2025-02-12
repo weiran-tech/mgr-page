@@ -25,7 +25,7 @@ class HomeController extends DevelopController
      */
     public function index()
     {
-        return view('py-mgr-page::develop.home.cp');
+        return view('weiran-mgr-page::develop.home.cp');
     }
 
     public function optimize(): Factory|\Illuminate\Foundation\Application|View|Response|JsonResponse|Application|RedirectResponse
@@ -78,7 +78,7 @@ class HomeController extends DevelopController
         if ($table) {
             $sql = sys_tag('py-system-persist')->hGetAll(PySystemDef::ckDbOptimize($table));
         }
-        return view('py-mgr-page::develop.home.optimize', [
+        return view('weiran-mgr-page::develop.home.optimize', [
             'tables'  => $tableData,
             'table'   => $table,
             'is_open' => (new DbOptimize())->isOpen(),
