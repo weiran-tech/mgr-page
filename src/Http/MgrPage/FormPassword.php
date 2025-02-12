@@ -46,7 +46,7 @@ class FormPassword extends FormWidget
         }
         app('auth')->guard(PamAccount::GUARD_BACKEND)->logout();
 
-        return Resp::success('密码修改成功, 请重新登录', '_location|' . route('py-mgr-page:backend.home.login'));
+        return Resp::success('密码修改成功, 请重新登录', '_location|' . route('wr-mgr-page:backend.home.login'));
 
     }
 

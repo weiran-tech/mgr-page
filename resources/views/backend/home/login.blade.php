@@ -19,7 +19,7 @@
         <div class="layui-col-md6 layui-col-md-offset3 layui-col-sm12">
             {!! Form::open(['class'=> 'layui-form login-pane']) !!}
             <fieldset class="layui-elem-field layui-field-title">
-                <legend>{!! sys_setting('py-system::site.site_name') !!}登录</legend>
+                <legend>{!! sys_setting('wr-system::site.site_name') !!}登录</legend>
                 <div class="layui-field-box">
                     <div class="layui-row">
                         <div class="layui-col-sm3 layui-col-xs-12">

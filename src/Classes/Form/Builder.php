@@ -86,7 +86,7 @@ class Builder
      *
      * @var string
      */
-    protected $view = 'py-mgr-page::tpl.form';
+    protected $view = 'wr-mgr-page::tpl.form';
 
     /**
      * Form title.

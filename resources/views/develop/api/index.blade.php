@@ -3,7 +3,7 @@
     @include('py-mgr-page::develop.api.nav')
     @if (!$data['file_exists'])
         <div class="layui-elem-quote">
-            Api Doc 文件不存在, 请运行 <code>php artisan py-core:doc api</code> 来生成 Api 文档
+            Api Doc 文件不存在, 请运行 <code>php artisan wr-core:doc api</code> 来生成 Api 文档
         </div>
         <hr>
     @else

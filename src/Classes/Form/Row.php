@@ -84,7 +84,7 @@ class Row implements Renderable
      */
     public function render()
     {
-        return view('py-mgr-page::tpl.form.row', ['fields' => $this->fields]);
+        return view('wr-mgr-page::tpl.form.row', ['fields' => $this->fields]);
     }
 
     /**

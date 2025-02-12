@@ -52,8 +52,8 @@ class HomeController extends BackendController
             '_menus' => $this->coreModule()->menus()->withPermission(PamAccount::TYPE_BACKEND, $isFullPermission, $this->pam),
         ]);
         $host = StrHelper::formatId(EnvHelper::host()) . '-backend';
-        $name = sys_setting('py-system::site.name');
-        $logo = sys_setting('py-system::site.logo');
+        $name = sys_setting('wr-system::site.name');
+        $logo = sys_setting('wr-system::site.logo');
         $main = route('py-mgr-page:backend.home.cp', [], false);
         return view('py-mgr-page::backend.home.index', [
             'host' => $host,
@@ -196,7 +196,7 @@ class HomeController extends BackendController
      */
     private function setSessionLifetime(PamAccount $pam): void
     {
-        $defaultLoginHours = sys_setting('py-system::pam.lifetime') ?: 12;
+        $defaultLoginHours = sys_setting('wr-system::pam.lifetime') ?: 12;
 
         // 获取用户设定
         $setting  = $this->userSettingGet($pam->id, PySystemDef::uskAccount());
@@ -210,7 +210,7 @@ class HomeController extends BackendController
      */
     private function isRemember(): bool
     {
-        return (bool) sys_setting('py-system::pam.is_remember');
+        return (bool) sys_setting('wr-system::pam.is_remember');
     }
 
     /**
@@ -228,7 +228,7 @@ class HomeController extends BackendController
         $cookieValue = $cookieJar->queued($auth->getRecallerName())->getValue();
 
         // reset expired value
-        $rememberTokenExpireMinutes = ((int) sys_setting('py-system::pam.remember_hour', 60) ?: 60) * 24 * 60;
+        $rememberTokenExpireMinutes = ((int) sys_setting('wr-system::pam.remember_hour', 60) ?: 60) * 24 * 60;
         $cookieJar->queue($auth->getRecallerName(), $cookieValue, $rememberTokenExpireMinutes);
     }
 }

@@ -21,7 +21,7 @@ class FormSettingPam extends FormSettingBase
     {
         $data = parent::data();
         return array_merge($data, [
-            'lifetime' => sys_setting('py-system::pam.lifetime') ?: 12,
+            'lifetime' => sys_setting('wr-system::pam.lifetime') ?: 12,
         ]);
     }
 

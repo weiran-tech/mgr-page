@@ -46,7 +46,7 @@ class CaptchaController extends BackendController
         }
 
         $Verification = new Verification();
-        $expired      = (int) sys_setting('py-system::pam.captcha_expired') ?: 5;
+        $expired      = (int) sys_setting('wr-system::pam.captcha_expired') ?: 5;
         if (!$Verification->isPassThrottle($passport)) {
             return Resp::error($Verification->getError());
         }

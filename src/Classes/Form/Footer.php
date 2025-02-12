@@ -12,7 +12,7 @@ class Footer implements Renderable
 	 *
 	 * @var string
 	 */
-	protected $view = 'py-mgr-page::tpl.form.footer';
+	protected $view = 'wr-mgr-page::tpl.form.footer';
 
 	/**
 	 * Form builder instance.

@@ -25,7 +25,7 @@ class FormMailStore extends FormSettingBase
     public function form(): void
     {
         $this->boxTools(function (Operations $operations) {
-            $operations->iframe('发送测试邮件', route('py-mgr-page:backend.mail.test'));
+            $operations->iframe('发送测试邮件', route('wr-mgr-page:backend.mail.test'));
         });
 
         $this->radio('driver', '发送方式')->options([
