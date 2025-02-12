@@ -48,7 +48,7 @@
     {!! $grid->renderBatchActions() !!}
 </div>
 </script>
-{!! Poppy\MgrPage\Classes\Widgets\FormWidget::assetsStrAppendBody('builder') !!}
+{!! Weiran\MgrPage\Classes\Widgets\FormWidget::assetsStrAppendBody('builder') !!}
 <script>
 layui.table.render($.extend({!! $lay !!}, {
     // 返回的数据去做解析

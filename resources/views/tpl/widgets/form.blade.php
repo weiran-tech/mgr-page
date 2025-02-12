@@ -27,7 +27,7 @@
         </div>
     @endif
 </form>
-{!! Poppy\MgrPage\Classes\Widgets\FormWidget::assetsStrAppendBody('builder') !!}
+{!! Weiran\MgrPage\Classes\Widgets\FormWidget::assetsStrAppendBody('builder') !!}
 <script>
 $(function () {
     layui.form.render();

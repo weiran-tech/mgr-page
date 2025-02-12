@@ -11,14 +11,14 @@
                         @foreach($v_group['children'] as $v_link)
                             @if (isset($v_link['url']) && $v_link['url'])
                                 <div class="search" v-on:click="switchQuick">
-                                    <span class="hide">{!! Poppy\MgrPage\Classes\SearchCache::py($v_link['title']) !!}</span>
+                                    <span class="hide">{!! Weiran\MgrPage\Classes\SearchCache::py($v_link['title']) !!}</span>
                                     {!! mgr_menu_title($v_link) !!}
                                 </div>
                             @endif
                             @if($v_link['children']??[])
                                 @foreach ($v_link['children'] as $c_link)
                                     <div class="search" v-on:click="switchQuick">
-                                        <span class="hide">{!! Poppy\MgrPage\Classes\SearchCache::py($c_link['title']) !!}</span>
+                                        <span class="hide">{!! Weiran\MgrPage\Classes\SearchCache::py($c_link['title']) !!}</span>
                                         {!! mgr_menu_title($c_link) !!}
                                     </div>
                                 @endforeach

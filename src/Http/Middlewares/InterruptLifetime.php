@@ -27,7 +27,7 @@ class InterruptLifetime
     {
         if ($user = $request->user()) {
             /** @var PamAccount $user */
-            $defaultLoginHours = sys_setting('wr-system::pam.lifetime') ?: 12;
+            $defaultLoginHours = sys_setting('weiran-system::pam.lifetime') ?: 12;
             // user setting
             $setting  = $this->userSettingGet($user->id, PySystemDef::uskAccount());
             $lifetime = ($setting['expired_hour'] ?? $defaultLoginHours) * 60;

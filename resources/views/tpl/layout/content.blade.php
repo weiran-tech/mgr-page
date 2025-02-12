@@ -9,7 +9,7 @@
     @include('py-mgr-page::tpl._js_css', [
        '_type' => [ 'layui'],
     ])
-    {!! Poppy\MgrPage\Classes\Widgets\FormWidget::assetsAppendHead('builder') !!}
+    {!! Weiran\MgrPage\Classes\Widgets\FormWidget::assetsAppendHead('builder') !!}
 @endsection
 @section('body-class')
     {!! input('_iframe') === 'poppy' ? 'layui-iframe' : '' !!}

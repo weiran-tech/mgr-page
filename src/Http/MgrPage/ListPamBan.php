@@ -60,7 +60,7 @@ class ListPamBan extends ListBase
     {
         $type = input(Scope::QUERY_NAME, PamAccount::TYPE_USER);
         return function (Operations $operations) use ($type) {
-            $status = sys_setting('wr-system::ban.status-' . $type, SysConfig::STR_NO);
+            $status = sys_setting('weiran-system::ban.status-' . $type, SysConfig::STR_NO);
             $url    = route_url('weiran-mgr-page:backend.ban.status', null, ['type' => $type,]);
             if ($status === 'Y') {
                 $operations->disable($url, '风险拦截');
@@ -69,7 +69,7 @@ class ListPamBan extends ListBase
                 $operations->enable($url, '风险拦截');
             }
 
-            $isBlack = sys_setting('wr-system::ban.type-' . $type, PamBan::WB_TYPE_BLACK) === PamBan::WB_TYPE_BLACK;
+            $isBlack = sys_setting('weiran-system::ban.type-' . $type, PamBan::WB_TYPE_BLACK) === PamBan::WB_TYPE_BLACK;
             $url     = route_url('weiran-mgr-page:backend.ban.type', null, ['type' => $type,]);
             if ($isBlack) {
                 $operations->request('黑名单模式', $url)->icon('pause-circle')->tooltip('当前黑名单, 点击切换到白名单')->sm()
