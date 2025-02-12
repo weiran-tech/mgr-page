@@ -1,6 +1,6 @@
 @extends('weiran-mgr-page::develop.tpl.default')
 @section('develop-main')
-    @include('py-mgr-page::develop.tpl._header')
+    @include('weiran-mgr-page::develop.tpl._header')
     <h3>数据库字典</h3>
     @foreach($items as $tb_name =>  $item)
         <h4>{!! $tb_name !!}</h4>

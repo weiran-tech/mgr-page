@@ -1,6 +1,6 @@
-@extends('py-mgr-page::develop.tpl.default')
+@extends('weiran-mgr-page::develop.tpl.default')
 @section('develop-main')
-    @include('py-mgr-page::develop.tpl._header')
+    @include('weiran-mgr-page::develop.tpl._header')
     <div class="develop-home">
         @foreach($_menus as $nav_key => $nav)
             <fieldset class="layui-elem-field layui-field-title" id="{{md5($nav['title'])}}">

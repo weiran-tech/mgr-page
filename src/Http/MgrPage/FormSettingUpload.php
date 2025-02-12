@@ -17,7 +17,7 @@ class FormSettingUpload extends FormSettingBase
 
     protected $withContent = true;
 
-    protected $group = 'py-system::picture';
+    protected $group = 'weiran-system::picture';
 
     /**
      * Build a form here.

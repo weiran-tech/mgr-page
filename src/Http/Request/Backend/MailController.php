@@ -26,7 +26,7 @@ class MailController extends BackendController
         parent::__construct();
 
         self::$permission = [
-            'global' => 'backend:py-system.global.manage',
+            'global' => 'backend:weiran-system.global.manage',
         ];
     }
 

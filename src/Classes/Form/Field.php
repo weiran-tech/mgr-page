@@ -685,7 +685,7 @@ class Field implements Renderable
      */
     public function getPlaceholder()
     {
-        return $this->placeholder ?: trans('py-system::form.input', [
+        return $this->placeholder ?: trans('weiran-system::form.input', [
             'label' => $this->label,
         ]);
     }

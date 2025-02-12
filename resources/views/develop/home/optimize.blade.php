@@ -1,9 +1,9 @@
-@extends('py-mgr-page::develop.tpl.default')
+@extends('weiran-mgr-page::develop.tpl.default')
 @section('body-class')
     @parent develop-optimize
 @endsection
 @section('develop-main')
-    @include('py-mgr-page::develop.tpl._header')
+    @include('weiran-mgr-page::develop.tpl._header')
     <fieldset class="layui-elem-field layui-field-title">
         <legend>
             <i class="bi bi-database"></i> 数据库查询监控
@@ -55,5 +55,5 @@
             </div>
         </div>
     </div>
-    @include('py-mgr-page::develop.tpl._log')
+    @include('weiran-mgr-page::develop.tpl._log')
 @endsection

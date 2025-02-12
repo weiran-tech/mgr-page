@@ -17,7 +17,7 @@ class FormMailStore extends FormSettingBase
 
     protected string $title = '邮件配置';
 
-    protected $group = 'py-system::mail';
+    protected $group = 'weiran-system::mail';
 
     /**
      * Build a form here.

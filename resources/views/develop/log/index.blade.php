@@ -3,7 +3,7 @@
     @parent() develop-log
 @endsection
 @section('develop-main')
-    @include('py-mgr-page::develop.tpl._header')
+    @include('weiran-mgr-page::develop.tpl._header')
     <fieldset class="layui-elem-field layui-field-title">
         <legend><i class="bi bi-body-text"></i> 日志查看器</legend>
     </fieldset>
@@ -76,5 +76,5 @@
         </div>
     </div>
 
-    @include('py-mgr-page::develop.tpl._log')
+    @include('weiran-mgr-page::develop.tpl._log')
 @endsection

@@ -29,7 +29,7 @@
                    lay-action="template/search.html?keywords=">
         </li>
         --}}
-        @if($_pam->capable('backend:py-system.develop.manage'))
+        @if($_pam->capable('backend:weiran-system.develop.manage'))
         <li class="layui-nav-item" lay-unselect>
             <a href="{!! route('weiran-mgr-page:develop.home.cp') !!}" target="_blank" title="开发工具" class="J_ignore">
                 <i class="layui-icon layui-icon-find-fill"></i>

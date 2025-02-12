@@ -31,28 +31,28 @@ class HomeController extends DevelopController
     public function optimize(): Factory|\Illuminate\Foundation\Application|View|Response|JsonResponse|Application|RedirectResponse
     {
         $key = PySystemDef::ckDbOptimize('on');
-        $all = sys_tag('py-system-persist')->hGetAll($key);
+        $all = sys_tag('weiran-system-persist')->hGetAll($key);
         if ($do = input('do')) {
             switch ($do) {
                 case 'on';
                 case 'off';
                     $table = input('table');
                     if ($do === 'on') {
-                        sys_tag('py-system-persist')->hSet($key, $table, 1);
+                        sys_tag('weiran-system-persist')->hSet($key, $table, 1);
                     }
                     else {
-                        sys_tag('py-system-persist')->hDel($key, $table);
+                        sys_tag('weiran-system-persist')->hDel($key, $table);
                     }
                     return Resp::success('操作成功', '_reload|1');
                 case 'open':
                 case 'close':
-                    sys_tag('py-system-persist')->set(PySystemDef::ckDbOptimize('is_open'), $do === 'open' ? 'Y' : 'N');
+                    sys_tag('weiran-system-persist')->set(PySystemDef::ckDbOptimize('is_open'), $do === 'open' ? 'Y' : 'N');
                     return Resp::success('操作成功', '_reload|1');
             }
         }
 
         if ($del = input('del')) {
-            sys_tag('py-system-persist')->del(PySystemDef::ckDbOptimize($del));
+            sys_tag('weiran-system-persist')->del(PySystemDef::ckDbOptimize($del));
             return Resp::success('已删除', '_reload|1');
         }
 
@@ -65,7 +65,7 @@ class HomeController extends DevelopController
             $isOpen = isset($all[$table]);
             $len    = 0;
             if ($isOpen) {
-                $len = sys_tag('py-system-persist')->hLen(PySystemDef::ckDbOptimize($table));
+                $len = sys_tag('weiran-system-persist')->hLen(PySystemDef::ckDbOptimize($table));
             }
             $tableData[] = [
                 'name'    => $table,
@@ -76,7 +76,7 @@ class HomeController extends DevelopController
         $table = input('table');
         $sql   = [];
         if ($table) {
-            $sql = sys_tag('py-system-persist')->hGetAll(PySystemDef::ckDbOptimize($table));
+            $sql = sys_tag('weiran-system-persist')->hGetAll(PySystemDef::ckDbOptimize($table));
         }
         return view('weiran-mgr-page::develop.home.optimize', [
             'tables'  => $tableData,

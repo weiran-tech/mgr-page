@@ -1,6 +1,6 @@
-@extends('py-mgr-page::develop.tpl.default')
+@extends('weiran-mgr-page::develop.tpl.default')
 @section('develop-main')
-    @include('py-mgr-page::develop.tpl._header')
+    @include('weiran-mgr-page::develop.tpl._header')
     @if(count($all))
         <table class="layui-table">
             <tr>
@@ -16,7 +16,7 @@
                     <td>{{ in_array($item['class'], $already, true) ? '已执行' : '未执行' }}</td>
                     <td>
                         @if(!in_array($item['class'], $already, true))
-                            <a href="{{ route_url('py-mgr-page:develop.progress.index', null, ['method' => $item['module'] . '.' . $item['class']]) }}"
+                            <a href="{{ route_url('weiran-mgr-page:develop.progress.index', null, ['method' => $item['module'] . '.' . $item['class']]) }}"
                                data-height="800"
                                data-width="800"
                                class="J_iframe J_tooltip"

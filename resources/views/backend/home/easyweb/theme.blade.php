@@ -1,7 +1,7 @@
-@extends('py-mgr-page::backend.tpl.default')
+@extends('weiran-mgr-page::backend.tpl.default')
 
 @section('head-css')
-    @include('py-mgr-page::backend.home.easyweb.common.include_css')
+    @include('weiran-mgr-page::backend.home.easyweb.common.include_css')
     <style>
 		.layui-card-body {
 			padding: 0;
@@ -135,7 +135,7 @@
 
     </div>
 
-    @include('py-mgr-page::backend.home.easyweb.common.include_js')
+    @include('weiran-mgr-page::backend.home.easyweb.common.include_js')
 
     <script>
     window.mgrHost = '{!! input('host') ? input('host') :  $host !!}';

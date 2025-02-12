@@ -41,11 +41,11 @@ class PamController extends BackendController
         parent::__construct();
 
         self::$permission = [
-            'global'   => 'backend:py-system.pam.manage',
-            'password' => 'backend:py-system.pam.password',
-            'log'      => 'backend:py-system.pam.log',
-            'disable'  => 'backend:py-system.pam.disable',
-            'enable'   => 'backend:py-system.pam.enable',
+            'global'   => 'backend:weiran-system.pam.manage',
+            'password' => 'backend:weiran-system.pam.password',
+            'log'      => 'backend:weiran-system.pam.log',
+            'disable'  => 'backend:weiran-system.pam.disable',
+            'enable'   => 'backend:weiran-system.pam.enable',
         ];
     }
 

@@ -15,7 +15,7 @@ use View;
 class DevelopController extends BackendController
 {
     public static array $permission = [
-        'global' => 'backend:py-system.develop.manage',
+        'global' => 'backend:weiran-system.develop.manage',
     ];
 
     use ViewTrait, CoreTrait;

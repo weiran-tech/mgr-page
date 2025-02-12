@@ -22,11 +22,11 @@ class FormSettingBan extends FormSettingBase
 
     protected string $type = '';
 
-    protected $group = 'py-system::ban';
+    protected $group = 'weiran-system::ban';
 
     public function setAccountType($type)
     {
-        $key         = 'py-system::ban.type-' . $type;
+        $key         = 'weiran-system::ban.type-' . $type;
         $this->type  = $type;
         $this->bw    = sys_setting($key, PamBan::WB_TYPE_BLACK);
         $this->title = $this->bw === PamBan::WB_TYPE_BLACK ? '黑名单模式' : '白名单模式';

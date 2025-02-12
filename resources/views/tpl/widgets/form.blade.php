@@ -13,13 +13,13 @@
             <div class="layui-col-sm{{$width['field']}} layui-col-xs12">
                 <div class="layui-form-auto-field">
                     @if(in_array('reset', $buttons, true))
-                        <button type="reset" class="layui-btn layui-btn-primary">{{ trans('py-system::form.reset') }}</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">{{ trans('weiran-system::form.reset') }}</button>
                     @endif
                     @if(in_array('submit', $buttons, true))
                         @if ($ajax)
-                            <button class="layui-btn layui-btn-normal">{{ trans('py-system::form.submit') }}</button>
+                            <button class="layui-btn layui-btn-normal">{{ trans('weiran-system::form.submit') }}</button>
                         @else
-                            <button type="submit" class="layui-btn layui-btn-normal">{{ trans('py-system::form.submit') }}</button>
+                            <button type="submit" class="layui-btn layui-btn-normal">{{ trans('weiran-system::form.submit') }}</button>
                         @endif
                     @endif
                 </div>

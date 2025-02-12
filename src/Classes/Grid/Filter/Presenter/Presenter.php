@@ -36,7 +36,7 @@ abstract class Presenter
     {
         $reflect = new ReflectionClass(static::class);
 
-        return 'py-mgr-page::tpl.filter.' . strtolower($reflect->getShortName());
+        return 'weiran-mgr-page::tpl.filter.' . strtolower($reflect->getShortName());
     }
 
     /**

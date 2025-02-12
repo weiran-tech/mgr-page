@@ -34,8 +34,8 @@ class RoleController extends BackendController
         View::share(compact('types'));
 
         self::$permission = [
-            'global' => 'backend:py-system.role.manage',
-            'menu'   => 'backend:py-system.role.permissions',
+            'global' => 'backend:weiran-system.role.manage',
+            'menu'   => 'backend:weiran-system.role.permissions',
         ];
     }
 

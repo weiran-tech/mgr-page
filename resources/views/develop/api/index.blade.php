@@ -1,13 +1,13 @@
 @extends('weiran-mgr-page::develop.tpl.default')
 @section('develop-main')
-    @include('py-mgr-page::develop.api.nav')
+    @include('weiran-mgr-page::develop.api.nav')
     @if (!$data['file_exists'])
         <div class="layui-elem-quote">
             Api Doc 文件不存在, 请运行 <code>php artisan wr-core:doc api</code> 来生成 Api 文档
         </div>
         <hr>
     @else
-        @include('py-mgr-page::develop.api._pam')
+        @include('weiran-mgr-page::develop.api._pam')
         <div class="layui-row layui-col-space10" id="app">
             <div class="layui-col-md6 mt5">
                 {{-- ajax 方式, 便于调试, 需要服务器配置跨域 --}}
@@ -17,11 +17,11 @@
                     'id'=> 'form_auto',
                     'class'=> 'layui-form'
                 ]) !!}
-                @include('py-mgr-page::develop.api._token')
-                @include('py-mgr-page::develop.api._headers')
-                @include('py-mgr-page::develop.api._certificate')
-                {{--@include('py-mgr-page::develop.api._params')--}}
-                @include('py-mgr-page::develop.api._queries')
+                @include('weiran-mgr-page::develop.api._token')
+                @include('weiran-mgr-page::develop.api._headers')
+                @include('weiran-mgr-page::develop.api._certificate')
+                {{--@include('weiran-mgr-page::develop.api._params')--}}
+                @include('weiran-mgr-page::develop.api._queries')
 
                 <div class="layui-form-item">
                     {!! Form::button($data['current']->title, ['class' => 'layui-btn layui-btn-sm', 'type'=>'submit', 'id'=>'submit']) !!}
@@ -111,7 +111,7 @@
 						}
 					});
 				},
-                @include('py-mgr-page::develop.api._validate')
+                @include('weiran-mgr-page::develop.api._validate')
 			}, true);
 			$('#form_auto').validate(conf);
 		});
