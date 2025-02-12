@@ -11,7 +11,7 @@ class FormSettingSite extends FormSettingBase
 {
     protected string $title = '站点设置';
 
-    protected $group = 'py-system::site';
+    protected $group = 'weiran-system::site';
 
     /**
      * Build a form here.

@@ -17,15 +17,15 @@ backend :
             -
               title : 系统配置
               route : weiran-mgr-page:backend.home.setting
-              permission : backend:py-system.global.manage
+              permission : backend:weiran-system.global.manage
             -
               title : 邮件设置
               route : weiran-mgr-page:backend.mail.store
-              permission : backend:py-system.global.manage
+              permission : backend:weiran-system.global.manage
             -
               title : 上传设置
               route : weiran-mgr-page:backend.upload.store
-              permission : backend:py-system.global.manage
+              permission : backend:weiran-system.global.manage
         -
           title : 账号管理
           icon : 'bi bi-person-vcard'
@@ -35,23 +35,23 @@ backend :
               route : weiran-mgr-page:backend.role.index
               param :
                 _scope : 'user'
-              permission : backend:py-system.role.manage
+              permission : backend:weiran-system.role.manage
             -
               title : 账号管理
               route : weiran-mgr-page:backend.pam.index
               param :
                 _scope : 'user'
-              permission : backend:py-system.pam.manage
+              permission : backend:weiran-system.pam.manage
             -
               title : 登录日志
               route : weiran-mgr-page:backend.pam.log
-              permission : backend:py-system.pam.log
+              permission : backend:weiran-system.pam.log
             -
               title : 风险拦截
               route : weiran-mgr-page:backend.ban.index
               param :
                 _scope : 'user'
-              permission : backend:py-system.pam.manage
+              permission : backend:weiran-system.pam.manage
 develop :
   title : 核心开发
   groups :

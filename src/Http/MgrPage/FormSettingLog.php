@@ -15,7 +15,7 @@ class FormSettingLog extends FormSettingBase
 
     protected string $title = '日志配置';
 
-    protected $group = 'py-system::log';
+    protected $group = 'weiran-system::log';
 
     /**
      * Build a form here.

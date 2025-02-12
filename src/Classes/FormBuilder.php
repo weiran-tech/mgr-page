@@ -155,7 +155,7 @@ class FormBuilder extends CollectiveFormBuilder
 
         $token = $pam ? app('tymon.jwt.auth')->fromUser($pam) : '';
 
-        $uploadUrl = route_url('py-system:api_v1.upload.image');
+        $uploadUrl = route_url('weiran-system:api_v1.upload.image');
 
         $contentId = 'Editor' . ucfirst(Str::random('5'));
         $timestamp = Carbon::now()->timestamp;
@@ -338,7 +338,7 @@ TIP;
         $readonly    = $options['readonly'] ?? false;
         $imageType   = $options['image_type'] ?? 'default';
         $watermark   = $options['watermark'] ?? false;
-        $uploadUrl   = route('py-system:api_v1.upload.image');
+        $uploadUrl   = route('weiran-system:api_v1.upload.image');
         $timestamp   = Carbon::now()->timestamp;
         /** @var ApiSignContract $Sign */
         $Sign    = app(ApiSignContract::class);
@@ -452,7 +452,7 @@ CONTENT;
         $template = str_replace(["\n", "\t", PHP_EOL], '', $template);
 
         $display_str = !$value ? 'class="hidden"' : '';
-        $uploadUrl   = route('py-system:api_v1.upload.file');
+        $uploadUrl   = route('weiran-system:api_v1.upload.file');
         return /** @lang text */
             <<<CONTENT
 <div class="layui-form-upload" style="padding-left:5px;">
@@ -576,7 +576,7 @@ SORT;
             }
 HAHA;
         }
-        $uploadUrl    = route('py-system:api_v1.upload.image');
+        $uploadUrl    = route('weiran-system:api_v1.upload.image');
         $autoUpload   = $auto ? '' : '<button type="button" class="layui-btn layui-btn-sm" id="' . $id . '_upload" disabled>开始上传</button>';
         $autoDoUpload = $auto ? 'obj.upload(index, file);' : '';
         return /** @lang text */

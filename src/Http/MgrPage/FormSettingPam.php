@@ -15,7 +15,7 @@ class FormSettingPam extends FormSettingBase
 
     protected string $title = '账号安全';
 
-    protected $group = 'py-system::pam';
+    protected $group = 'weiran-system::pam';
 
     public function data(): array
     {
