@@ -1,5 +1,5 @@
 <div class="layui-header">
-    <div class="layui-logo" lay-href="{!! route('py-mgr-page:backend.home.cp') !!}">
+    <div class="layui-logo" lay-href="{!! route('weiran-mgr-page:backend.home.cp') !!}">
         @if($logo)
             <img src="{!! $logo !!}" alt="{!! $name !!}">
         @else
@@ -22,7 +22,7 @@
                 <i class="layui-icon layui-icon-refresh-3"></i>
             </a>
         </li>
-        @include('py-mgr-page::backend.tpl._header_search')
+        @include('weiran-mgr-page::backend.tpl._header_search')
         {{--
         <li class="layui-nav-item layui-hide-xs" lay-unselect>
             <input type="text" placeholder="搜索..." autocomplete="off" class="layui-input layui-input-search"
@@ -31,7 +31,7 @@
         --}}
         @if($_pam->capable('backend:py-system.develop.manage'))
         <li class="layui-nav-item" lay-unselect>
-            <a href="{!! route('py-mgr-page:develop.home.cp') !!}" target="_blank" title="开发工具" class="J_ignore">
+            <a href="{!! route('weiran-mgr-page:develop.home.cp') !!}" target="_blank" title="开发工具" class="J_ignore">
                 <i class="layui-icon layui-icon-find-fill"></i>
             </a>
         </li>
@@ -42,12 +42,12 @@
             {!! sys_hook('poppy.mgr-page.html_top_nav') !!}
         </li>
         <li class="layui-nav-item layui-hide-xs" lay-unselect>
-            <a href="#" ew-event="note" data-url="{!! route_url('py-mgr-page:backend.home.easy-web', ['note']) !!}" class="J_ignore">
+            <a href="#" ew-event="note" data-url="{!! route_url('weiran-mgr-page:backend.home.easy-web', ['note']) !!}" class="J_ignore">
                 <i class="layui-icon layui-icon-note"></i>
             </a>
         </li>
         <li class="layui-nav-item layui-hide-xs" lay-unselect="">
-            <a ew-event="theme" class="J_ignore" data-url="{!! route_url('py-mgr-page:backend.home.easy-web', ['theme'], ['host'=> $host]) !!}">
+            <a ew-event="theme" class="J_ignore" data-url="{!! route_url('weiran-mgr-page:backend.home.easy-web', ['theme'], ['host'=> $host]) !!}">
                 <i class="layui-icon layui-icon-theme"></i>
             </a>
         </li>
@@ -62,10 +62,10 @@
                 <span class="layui-nav-more"></span>
             </a>
             <dl class="layui-nav-child">
-                <dd><a ew-href="{!! route('py-mgr-page:backend.home.password') !!}" class="J_ignore">修改密码</a></dd>
-                <dd><a href="{!! route('py-mgr-page:backend.home.clear_cache') !!}" class="J_ignore J_request">清空缓存</a></dd>
+                <dd><a ew-href="{!! route('weiran-mgr-page:backend.home.password') !!}" class="J_ignore">修改密码</a></dd>
+                <dd><a href="{!! route('weiran-mgr-page:backend.home.clear_cache') !!}" class="J_ignore J_request">清空缓存</a></dd>
                 <dd style="text-align: center;">
-                    <a href="#" ew-event="logout" data-url="{!! route('py-mgr-page:backend.home.logout') !!}" class="J_ignore">退出</a>
+                    <a href="#" ew-event="logout" data-url="{!! route('weiran-mgr-page:backend.home.logout') !!}" class="J_ignore">退出</a>
                 </dd>
             </dl>
         </li>

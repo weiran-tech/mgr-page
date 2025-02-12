@@ -1,4 +1,4 @@
-@extends('py-mgr-page::develop.tpl.default')
+@extends('weiran-mgr-page::develop.tpl.default')
 @section('body-class')
     @parent() develop-log
 @endsection

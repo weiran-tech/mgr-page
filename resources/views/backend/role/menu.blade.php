@@ -1,4 +1,4 @@
-@extends('py-mgr-page::backend.tpl.dialog')
+@extends('weiran-mgr-page::backend.tpl.dialog')
 @section('backend-main')
     {{--  要想渲染页面, 必须要有 layui-form 类--}}
     {!! Form::open(['route' => [$_route, $role->id], 'class'=> 'layui-form']) !!}

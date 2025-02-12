@@ -1,19 +1,19 @@
-@extends('py-mgr-page::tpl.default')
+@extends('weiran-mgr-page::tpl.default')
 @section('title', $_title ?? '')
 @section('description', $_description ?? '')
 @section('head-content')
-    @include('py-mgr-page::tpl._js_css', [
+    @include('weiran-mgr-page::tpl._js_css', [
         '_type' => ['layui']
     ])
 @endsection
 @section('body-main')
-    @include('py-mgr-page::tpl._toastr')
+    @include('weiran-mgr-page::tpl._toastr')
     <div class="layui-card pd15">
         <div class="layui-tab">
             <ul class="layui-tab-title mg8 pl8 pr8">
                 @foreach($hooks as $key => $hook)
                     <li class="{!! $key === $path ? 'layui-this' : '' !!}">
-                        <a class="J_ignore" href="{!! route('py-mgr-page:backend.home.setting', [$key]) !!}">
+                        <a class="J_ignore" href="{!! route('weiran-mgr-page:backend.home.setting', [$key]) !!}">
                             {!! $hook['title'] !!}
                         </a>
                     </li>
@@ -27,7 +27,7 @@
                             @foreach($forms as $group_key => $form)
                                 <li class="{!! $group_key === $index ? 'layui-this' : '' !!}">
                                     <a class="J_ignore"
-                                            href="{!! route('py-mgr-page:backend.home.setting', [$path, $group_key]) !!}">
+                                            href="{!! route('weiran-mgr-page:backend.home.setting', [$path, $group_key]) !!}">
                                         {!! $form->title()  !!}
                                     </a>
                                 </li>

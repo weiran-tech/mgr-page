@@ -10,7 +10,7 @@
     <div class="{{$viewClass['field']}}">
         <?php $value = !is_null($value) ? (array) $value : [''] ?>
         {!! Form::question($name, $value) !!}
-        @include('py-mgr-page::tpl.form.help-block')
-        @include('py-mgr-page::tpl.form.error')
+        @include('weiran-mgr-page::tpl.form.help-block')
+        @include('weiran-mgr-page::tpl.form.error')
     </div>
 </div>

@@ -1,5 +1,5 @@
-@extends('py-mgr-page::develop.tpl.default')
+@extends('weiran-mgr-page::develop.tpl.default')
 @section('develop-main')
-    @include('py-mgr-page::develop.tpl._header')
+    @include('weiran-mgr-page::develop.tpl._header')
     <?php phpinfo() ?>
 @endsection

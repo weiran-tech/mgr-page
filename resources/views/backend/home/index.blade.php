@@ -1,22 +1,22 @@
-@extends('py-mgr-page::tpl.default')
+@extends('weiran-mgr-page::tpl.default')
 @section('title', $_title ?? '')
 @section('description', $_description ?? '')
 @section('head-meta')
     {!! Html::favicon('assets/images/default/favicon.png') !!}
 @endsection
 @section('head-content')
-    @include('py-mgr-page::tpl._js_css', [
+    @include('weiran-mgr-page::tpl._js_css', [
         '_type' => ['layui', 'easy-web']
     ])
 @endsection
 @section('body-class', 'layui-layout-body')
 @section('body-main')
     <div id="LAY_app">
-        @include('py-mgr-page::tpl._toastr')
+        @include('weiran-mgr-page::tpl._toastr')
         <div class="layui-layout layui-layout-admin">
-        @include('py-mgr-page::backend.tpl._header')
-        @include('py-mgr-page::backend.tpl._sidemenu')
-        @include('py-mgr-page::backend.tpl._pagetabs')
+        @include('weiran-mgr-page::backend.tpl._header')
+        @include('weiran-mgr-page::backend.tpl._sidemenu')
+        @include('weiran-mgr-page::backend.tpl._pagetabs')
         <!-- 主体内容 -->
             <div class="layui-body" id="LAY_app_body">
                 <div class="layadmin-tabsbody-item layui-show"></div>

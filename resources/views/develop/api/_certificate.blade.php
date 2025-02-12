@@ -9,7 +9,7 @@
                     {!! strip_tags($field['type']) !!}
                     [{!! $field['name'] !!}]
                     )
-                    <a href="{!! route_url('py-mgr-page:develop.api.field', [$guard,$field['name']]) !!}"
+                    <a href="{!! route_url('weiran-mgr-page:develop.api.field', [$guard,$field['name']]) !!}"
                         data-title="设置 {!! $field['title'] !!}" class="J_iframe pull-right">
                         <i class="layui-icon layui-icon-set" style="font-size: 30px;"></i>
                     </a>

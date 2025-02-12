@@ -1,7 +1,7 @@
 <div class="{{$viewClass['form-group']}} {!! (isset($errors) && !$errors->has($errorKey)) ? '' : 'has-error' !!}">
 
 	<label for="{{$id['lat']}}" class="{{$viewClass['label']}}">
-		@include('py-mgr-page::tpl.form.help-tip')
+		@include('weiran-mgr-page::tpl.form.help-tip')
 		{{$label}}
 	</label>
 
@@ -13,7 +13,7 @@
 			value="{{ old($column['lat'], $value['lat']) }}" {!! $attributes !!} />
 		<input type="hidden" id="{{$id['lng']}}" name="{{$name['lng']}}"
 			value="{{ old($column['lng'], $value['lng']) }}" {!! $attributes !!} />
-		@include('py-mgr-page::tpl.form.help-block')
-		@include('py-mgr-page::tpl.form.error')
+		@include('weiran-mgr-page::tpl.form.help-block')
+		@include('weiran-mgr-page::tpl.form.error')
 	</div>
 </div>

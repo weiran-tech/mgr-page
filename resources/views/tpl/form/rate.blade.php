@@ -14,7 +14,7 @@
 				placeholder="0" style="text-align:right;" {!! $attributes !!} />
 			<span class="input-group-addon">%</span>
 		</div>
-		@include('py-mgr-page::tpl.form.help-block')
-		@include('py-mgr-page::tpl.form.error')
+		@include('weiran-mgr-page::tpl.form.help-block')
+		@include('weiran-mgr-page::tpl.form.error')
 	</div>
 </div>

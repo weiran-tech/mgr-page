@@ -1,4 +1,4 @@
-@extends('py-mgr-page::backend.tpl.dialog')
+@extends('weiran-mgr-page::backend.tpl.dialog')
 @section('backend-main')
     @if (isset($item))
         {!! Form::model($item,['route' => [$_route, $item->id],'class' => 'layui-form']) !!}

@@ -1,8 +1,8 @@
-@extends('py-mgr-page::tpl.default')
+@extends('weiran-mgr-page::tpl.default')
 @section('title', $_title ?? '')
 @section('description', $_description ?? '')
 @section('head-content')
-    @include('py-mgr-page::tpl._js_css', [
+    @include('weiran-mgr-page::tpl._js_css', [
         '_type' => ['layui', 'jquery.data-tables']
     ])
 @endsection

@@ -1,7 +1,7 @@
 <div class="{{$viewClass['form-group']}} {!! (isset($errors) && !$errors->has($errorKey)) ?: 'has-error' !!}">
     <div class="{{$viewClass['label']}}">
         <label for="{{$id}}" class=" layui-form-checkbox-label layui-form-auto-label {{$viewClass['label_element']}}">
-            @include('py-mgr-page::tpl.form.help-tip')
+            @include('weiran-mgr-page::tpl.form.help-tip')
             @if($canCheckAll)
                 {!! app('poppy.mgr-page.form')->checkbox('_check_all_'. $name,	1,	false, [
                     'lay-skin'=> 'primary',
@@ -37,7 +37,7 @@
                 </div>
             @endforeach
         </div>
-        @include('py-mgr-page::tpl.form.help-block')
-        @include('py-mgr-page::tpl.form.error')
+        @include('weiran-mgr-page::tpl.form.help-block')
+        @include('weiran-mgr-page::tpl.form.error')
     </div>
 </div>

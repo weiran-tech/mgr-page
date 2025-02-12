@@ -1,4 +1,4 @@
-@extends('py-mgr-page::develop.tpl.default')
+@extends('weiran-mgr-page::develop.tpl.default')
 @section('develop-main')
     @include('py-mgr-page::develop.tpl._header')
     <h3>数据库字典</h3>

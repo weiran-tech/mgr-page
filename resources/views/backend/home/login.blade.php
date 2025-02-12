@@ -1,8 +1,8 @@
-@extends('py-mgr-page::tpl.default')
+@extends('weiran-mgr-page::tpl.default')
 @section('title', $_title ?? '')
 @section('description', $_description ?? '')
 @section('head-css')
-    @include('py-mgr-page::tpl._js_css', [
+    @include('weiran-mgr-page::tpl._js_css', [
         '_type' => ['layui'],
     ])
     <style>
@@ -14,7 +14,7 @@
 @endsection
 @section('body-class', 'gray-bg backend--login')
 @section('body-main')
-    @include('py-mgr-page::tpl._toastr')
+    @include('weiran-mgr-page::tpl._toastr')
     <div class="layui-container">
         <div class="layui-col-md6 layui-col-md-offset3 layui-col-sm12">
             {!! Form::open(['class'=> 'layui-form login-pane']) !!}
@@ -105,7 +105,7 @@
             }
             let timerInstance = new easytimer.Timer();
             timerInstance.stop()
-            Util.makeRequest('{!! route_url('py-mgr-page:backend.captcha.send') !!}', {
+            Util.makeRequest('{!! route_url('weiran-mgr-page:backend.captcha.send') !!}', {
                 passport: passport,
                 captcha: captcha
             }, function (resp) {
