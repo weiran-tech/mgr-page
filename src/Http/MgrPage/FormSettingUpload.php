@@ -25,7 +25,7 @@ class FormSettingUpload extends FormSettingBase
     public function form(): void
     {
         $maxUploadSize = EnvHelper::maxUploadSize();
-        $uploadTypes   = sys_hook('poppy.system.upload_type');
+        $uploadTypes   = sys_hook('weiran.system.upload_type');
         $types         = [];
         foreach ($uploadTypes as $key => $desc) {
             $types[$key] = $desc['title'];

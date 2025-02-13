@@ -5,14 +5,14 @@
         </span>
         <div class="layui-row">
             <div class="layui-col-md4">
-                {!! app('poppy.mgr-page.form')->select($id .'_group', collect($group)->pluck('label'), null, [
+                {!! app('weiran.mgr-page.form')->select($id .'_group', collect($group)->pluck('label'), null, [
                     'lay-filter' => $id.'-lay-filter',
                     'lay-ignore',
                     'class' => 'layui-input-inline'
                 ]) !!}
             </div>
             <div class="layui-col-md8">
-                {!! app('poppy.mgr-page.form')->input($type, $name,  request($name, $value), [
+                {!! app('weiran.mgr-page.form')->input($type, $name,  request($name, $value), [
                     'class' => 'J_tooltip layui-input layui-input-inline',
                     'title' => $label,
                     'placeholder' => $placeholder,
@@ -21,7 +21,7 @@
         </div>
     </div>
 @else
-    {!! app('poppy.mgr-page.form')->input($type, $name,  request($name, $value), [
+    {!! app('weiran.mgr-page.form')->input($type, $name,  request($name, $value), [
         'class' => 'J_tooltip layui-input',
         'title' => $label,
         'placeholder' => $placeholder,

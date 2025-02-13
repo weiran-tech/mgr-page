@@ -27,5 +27,5 @@ $_type = $_type ?? [];
 @endif
 <script>
 window.POPPY = {};
-{!! sys_hook('poppy.mgr-page.html_js_vars')  !!}
+{!! sys_hook('weiran.mgr-page.html_js_vars')  !!}
 </script>

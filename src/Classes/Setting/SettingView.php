@@ -19,7 +19,7 @@ class SettingView
     {
         $index = (int) $index;
         try {
-            $hooks     = sys_hook('poppy.mgr-page.settings');
+            $hooks     = sys_hook('weiran.mgr-page.settings');
             $group     = $hooks[$path]['group'] ?? '';
             $groupHook = collect();
             collect($hooks)->each(function ($hook, $key) use ($groupHook, $group) {

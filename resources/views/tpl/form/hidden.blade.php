@@ -1,1 +1,1 @@
-{!! app('poppy.mgr-page.form')->hidden($name, $value, $attributes) !!}
+{!! app('weiran.mgr-page.form')->hidden($name, $value, $attributes) !!}

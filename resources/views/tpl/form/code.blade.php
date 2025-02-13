@@ -7,7 +7,7 @@
 	</div>
 	<div class="{{$viewClass['field']}}">
 		<div class="layui-form-auto-field">
-			{!! app('poppy.mgr-page.form')->code($name, $value) !!}
+			{!! app('weiran.mgr-page.form')->code($name, $value) !!}
 		</div>
 		@include('weiran-mgr-page::tpl.form.help-block')
 		@include('weiran-mgr-page::tpl.form.error')

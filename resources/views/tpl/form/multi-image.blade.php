@@ -9,7 +9,7 @@
 
     <div class="{{$viewClass['field']}}">
         <div class="layui-form-auto-field">
-            {!! app('poppy.mgr-page.form')->multiThumb($name, $value, $attributes) !!}
+            {!! app('weiran.mgr-page.form')->multiThumb($name, $value, $attributes) !!}
         </div>
         @include('weiran-mgr-page::tpl.form.help-block')
         @include('weiran-mgr-page::tpl.form.error')

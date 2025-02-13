@@ -40,7 +40,7 @@ class BanController extends BackendController
         $type   = input('type');
         $key    = 'weiran-system::ban.status-' . $type;
         $status = sys_setting($key, SysConfig::STR_NO);
-        app('poppy.system.setting')->set($key, $status === 'Y' ? SysConfig::STR_NO : SysConfig::STR_YES);
+        app('weiran.system.setting')->set($key, $status === 'Y' ? SysConfig::STR_NO : SysConfig::STR_YES);
         return Resp::success('已切换', '_reload|1');
     }
 
@@ -49,7 +49,7 @@ class BanController extends BackendController
         $type    = input('type');
         $key     = 'weiran-system::ban.type-' . $type;
         $isBlank = sys_setting($key, PamBan::WB_TYPE_BLACK) === PamBan::WB_TYPE_BLACK;
-        app('poppy.system.setting')->set($key, $isBlank ? PamBan::WB_TYPE_WHITE : PamBan::WB_TYPE_BLACK);
+        app('weiran.system.setting')->set($key, $isBlank ? PamBan::WB_TYPE_WHITE : PamBan::WB_TYPE_BLACK);
         return Resp::success('已切换封禁模式', '_reload|1');
     }
 

@@ -11,7 +11,7 @@
 		{!! !$inline ? '<div class="layui-field-radio-stack">' : '' !!}
 		@foreach($options as $option => $label)
 			<div class="layui-field-radio-item">
-				{!! app('poppy.mgr-page.form')->radio(
+				{!! app('weiran.mgr-page.form')->radio(
 				$name,
 				$option,
 				($option == old($column, $value)) || ($value === null && in_array($label, $checked, false)),
@@ -20,7 +20,7 @@
 					'id' => $column.'-'.$option,
 					'lay-ignore',
 				])) !!}
-				{!! app('poppy.mgr-page.form')->label($column.'-'.$option, $label, [
+				{!! app('weiran.mgr-page.form')->label($column.'-'.$option, $label, [
 					'class' => 'layui-field-radio-label'
 				]) !!}
 			</div>

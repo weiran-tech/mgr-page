@@ -89,7 +89,7 @@ class ServiceProvider extends WeiranServiceProvider
     private function registerForm(): void
     {
 
-        $this->app->singleton('poppy.mgr-page.form', function ($app) {
+        $this->app->singleton('weiran.mgr-page.form', function ($app) {
             $form = new FormBuilder($app['html'], $app['url'], $app['view'], $app['session.store']->token());
 
             return $form->setSessionStore($app['session.store']);

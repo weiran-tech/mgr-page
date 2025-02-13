@@ -35,7 +35,7 @@ class ListPamAccount extends ListBase
         $this->column('mobile', '手机号')->width(160, true)->display(function ($item) {
             return Str::after($item, '-');
         });
-        if (config('poppy.system.enable_email')) {
+        if (config('weiran.system.enable_email')) {
             $this->column('email', '邮箱');
         }
 

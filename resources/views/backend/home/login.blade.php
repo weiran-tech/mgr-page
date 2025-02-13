@@ -23,14 +23,14 @@
                 <div class="layui-field-box">
                     <div class="layui-row">
                         <div class="layui-col-sm3 layui-col-xs-12">
-                            {!! Form::label('passport', config('poppy.mgr-page.captcha_login') ? '手机号' : '用户名',
+                            {!! Form::label('passport', config('weiran.mgr-page.captcha_login') ? '手机号' : '用户名',
                                 ['class'=> 'layui-form-label validation']) !!}
                         </div>
                         <div class="layui-col-sm12 layui-col-xs12">
                             {!! Form::text('passport', null, ['class'=> 'layui-input']) !!}
                         </div>
                     </div>
-                    @if(!config('poppy.mgr-page.captcha_login'))
+                    @if(!config('weiran.mgr-page.captcha_login'))
                         <div class="layui-row">
                             <div class="layui-col-sm3 layui-col-xs-12">
                                 {!! Form::label('password', '密码', ['class'=> 'layui-form-label validation']) !!}
@@ -40,7 +40,7 @@
                             </div>
                         </div>
                     @endif
-                    @if(config('poppy.mgr-page.captcha_login'))
+                    @if(config('weiran.mgr-page.captcha_login'))
                         <div class="layui-row">
                             <div class="layui-col-sm3 layui-col-xs-12">
                                 {!! Form::label('code', '图形验证码', ['class'=> 'layui-form-label validation']) !!}
@@ -86,7 +86,7 @@
             </script>
         </div>
     </div>
-    @if(config('poppy.mgr-page.captcha_login'))
+    @if(config('weiran.mgr-page.captcha_login'))
         <script>
         $('body').on('click', '#send_captcha', function () {
             let passport = $('input[name="passport"]').val();

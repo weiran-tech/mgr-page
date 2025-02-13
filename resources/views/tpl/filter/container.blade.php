@@ -11,7 +11,7 @@
             @endforeach
             @if($export)
                 <div class="layui-col-md1 layui-col-sm2 py-handle">
-                    {!! app('poppy.mgr-page.form')->select('_export_', [
+                    {!! app('weiran.mgr-page.form')->select('_export_', [
                         'all' => '导出所有',
                         'current' => '导出当前页',
                     ], null, [

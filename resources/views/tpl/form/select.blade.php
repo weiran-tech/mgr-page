@@ -20,7 +20,7 @@
 				@endforeach
 			@endif
 
-			{!! app('poppy.mgr-page.form')->select($name, $options, old($column, $value), $attributes) !!}
+			{!! app('weiran.mgr-page.form')->select($name, $options, old($column, $value), $attributes) !!}
 		</div>
 		@include('weiran-mgr-page::tpl.form.help-block')
 		@include('weiran-mgr-page::tpl.form.error')

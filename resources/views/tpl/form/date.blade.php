@@ -8,7 +8,7 @@
     <div class="{{$viewClass['field']}}">
         <div class="layui-form-auto-field">
             <div class="layui-inline">
-                {!! app('poppy.mgr-page.form')->datePicker($name, old($column, $value), $attributes + [
+                {!! app('weiran.mgr-page.form')->datePicker($name, old($column, $value), $attributes + [
                     'id' => $id,
                     'placeholder' => $placeholder,
                 ] + $options) !!}

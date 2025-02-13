@@ -8,7 +8,7 @@
     </div>
 
     <div class="{{$viewClass['field']}}">
-        {!! app('poppy.mgr-page.form')->upload($name, $value, array_merge($attributes, $options)) !!}
+        {!! app('weiran.mgr-page.form')->upload($name, $value, array_merge($attributes, $options)) !!}
         @include('weiran-mgr-page::tpl.form.help-block')
         @include('weiran-mgr-page::tpl.form.error')
     </div>

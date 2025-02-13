@@ -15,7 +15,7 @@
 @endif
 <div class="layui-input-group">
     <span class="layui-input-group-addon"><i class="fa fa-calendar"></i></span>
-    {!! app('poppy.mgr-page.form')->datePicker($name, request($name, $value),  [
+    {!! app('weiran.mgr-page.form')->datePicker($name, request($name, $value),  [
         'class' => 'layui-input',
         'id' => $id,
         'placeholder' => $label,

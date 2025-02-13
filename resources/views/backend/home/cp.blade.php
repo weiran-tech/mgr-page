@@ -12,6 +12,6 @@
 @section('body-main')
     @include('weiran-mgr-page::tpl._toastr')
     <div class="layui-fluid pt15 pb15" data-pjax pjax-ctr="#main" id="main">
-        {!! sys_hook('poppy.mgr-page.html_cp') !!}
+        {!! sys_hook('weiran.mgr-page.html_cp') !!}
     </div>
 @endsection

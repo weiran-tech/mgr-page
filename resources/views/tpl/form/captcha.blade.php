@@ -8,13 +8,13 @@
     <div class="{{$viewClass['field']}}">
         <div class="layui-form-auto-field">
             <div class="layui-input-inline" style="width: 80px;">
-                {!! app('poppy.mgr-page.form')->text($name, '', [
+                {!! app('weiran.mgr-page.form')->text($name, '', [
                     'class' => 'layui-input',
                     'style' => 'width:80px;',
                 ]) !!}
             </div>
             <div>
-                {!! app('poppy.mgr-page.form')->captcha($name, '') !!}
+                {!! app('weiran.mgr-page.form')->captcha($name, '') !!}
             </div>
         </div>
         @include('weiran-mgr-page::tpl.form.help-block')

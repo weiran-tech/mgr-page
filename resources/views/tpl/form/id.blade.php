@@ -8,7 +8,7 @@
 
 	<div class="{{$viewClass['field']}}">
 		<div class="layui-form-auto-field">
-			{!! app('poppy.mgr-page.form')->text($name, $value, [
+			{!! app('weiran.mgr-page.form')->text($name, $value, [
 				'readonly' => 'readonly',
 				'class' => 'layui-input',
 				'id' => $id,

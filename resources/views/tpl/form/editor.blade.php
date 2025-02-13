@@ -9,7 +9,7 @@
 
 	<div class="{{$viewClass['field']}}">
 		<div class="layui-form-auto-field">
-			{!! app('poppy.mgr-page.form')->editor($name, old($column, $value), array_merge([
+			{!! app('weiran.mgr-page.form')->editor($name, old($column, $value), array_merge([
 				'placeholder' => $placeholder,
 			], $options)) !!}
 		</div>

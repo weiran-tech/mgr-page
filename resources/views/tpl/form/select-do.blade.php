@@ -9,7 +9,7 @@
 
     <div class="{{$viewClass['field']}}">
         <div class="layui-form-auto-field">
-            {!! app('poppy.mgr-page.form')->select($name, $options, old($column, $value), $attributes) !!}
+            {!! app('weiran.mgr-page.form')->select($name, $options, old($column, $value), $attributes) !!}
             @if (isset($type) && $type === 'location')
                 <script>
                 layui.use(function () {
