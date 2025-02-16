@@ -3,7 +3,7 @@
         @if($logo)
             <img src="{!! $logo !!}" alt="{!! $name !!}">
         @else
-            {!! $name ?: 'Poppy Mgr Page' !!}
+            {!! $name ?: '蔚然管理后台' !!}
         @endif
     </div>
     <ul class="layui-nav layui-layout-left">
