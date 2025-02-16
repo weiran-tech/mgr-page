@@ -288,7 +288,7 @@ abstract class ListBase implements ListContract
 
     /**
      * 当前的数据模型
-     * @return Model|\Poppy\MgrPage\Classes\Grid\Model
+     * @return Model|\Weiran\MgrPage\Classes\Grid\Model
      */
     private function model()
     {

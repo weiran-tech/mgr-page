@@ -99,8 +99,8 @@ class RoleController extends BackendController
             return Resp::error('暂无权限信息(请检查是否初始化权限)！');
         }
         $groupedPermission = collect($permission)->groupBy(function ($item, $key) {
-            if (Str::contains($key, 'py-')) {
-                return 'poppy';
+            if (Str::contains($key, 'weiran-')) {
+                return 'weiran';
             }
             return 'module';
         });

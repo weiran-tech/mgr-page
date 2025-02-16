@@ -3,7 +3,7 @@
 namespace Weiran\MgrPage\Classes\Grid\Concerns;
 
 use JsonException;
-use Weiran\Framework\Classes\Traits\PoppyTrait;
+use Weiran\Framework\Classes\Traits\WeiranTrait;
 use Weiran\MgrPage\Classes\Grid\Column;
 
 /**
@@ -11,7 +11,7 @@ use Weiran\MgrPage\Classes\Grid\Column;
  */
 trait LayDefines
 {
-    use PoppyTrait;
+    use WeiranTrait;
 
     /**
      * @var array

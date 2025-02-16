@@ -60,13 +60,6 @@ class RouteServiceProvider extends \Weiran\Framework\Application\RouteServicePro
     {
         // develop
         Route::group([
-            'middleware' => 'web',
-            'prefix'     => $this->prefix . '/develop',
-        ], function (Router $router) {
-            $router->any('api/json/{type?}', 'Poppy\MgrPage\Http\Request\Develop\ApiController@json')
-                ->name('weiran-mgr-page:develop.api.json');
-        });
-        Route::group([
             'middleware' => 'backend-auth',
             'prefix'     => $this->prefix . '/develop',
         ], function () {

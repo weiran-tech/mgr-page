@@ -13,7 +13,7 @@ class HtmlJsVar implements ServiceHtml
     {
         $rules = preg_replace('/\s+/', ';', (string) sys_setting('weiran-system::picture.preview_rule', ''));
         return <<<JS
-window.POPPY.MGRPAGE = {
+window.WEIRAN.MGRPAGE = {
     'picturePreviewRule' : '{$rules}'
 }
 JS;

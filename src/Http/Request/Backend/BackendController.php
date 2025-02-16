@@ -6,7 +6,7 @@ namespace Weiran\MgrPage\Http\Request\Backend;
 
 use Auth;
 use Weiran\Framework\Application\Controller;
-use Weiran\Framework\Classes\Traits\PoppyTrait;
+use Weiran\Framework\Classes\Traits\WeiranTrait;
 use Weiran\System\Models\PamAccount;
 
 /**
@@ -14,7 +14,7 @@ use Weiran\System\Models\PamAccount;
  */
 abstract class BackendController extends Controller
 {
-    use PoppyTrait;
+    use WeiranTrait;
 
     /**
      * @var PamAccount|null

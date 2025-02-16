@@ -16,7 +16,7 @@ use Illuminate\Validation\Validator;
 use JsonException;
 use Weiran\Area\Classes\Form\Field\Area;
 use Weiran\Framework\Classes\Resp;
-use Weiran\Framework\Classes\Traits\PoppyTrait;
+use Weiran\Framework\Classes\Traits\WeiranTrait;
 use Weiran\Framework\Helper\ArrayHelper;
 use Weiran\Framework\Helper\FileHelper;
 use Weiran\Framework\Validation\Rule;
@@ -75,7 +75,7 @@ use Weiran\MgrPage\Classes\Layout\Content;
  */
 class FormWidget implements Renderable
 {
-    use PoppyTrait;
+    use WeiranTrait;
 
 
     /**

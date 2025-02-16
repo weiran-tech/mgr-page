@@ -2,7 +2,7 @@
  * Poppy 的核心函数类 (全局)
  */
 if (typeof jQuery === 'undefined') {
-    alert('You need import jquery before poppy global util');
+    alert('You need import jquery before weiran global util');
 }
 
 if (typeof Util !== 'object') {

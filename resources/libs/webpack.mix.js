@@ -8,8 +8,8 @@ let mix = require('laravel-mix');
 mix
     .browserSync({
         // 这里替换地址
-        proxy : 'http://poppy-10.duoli.com/',
-        files : [
+        proxy: 'http://weiran-v1.duoli.com/',
+        files: [
             "public/assets/**/*.js",
             "public/assets/**/*.css",
             "modules/**/src/request/**/*.php",
@@ -18,7 +18,7 @@ mix
         ]
     })
     .options({
-        processCssUrls : false
+        processCssUrls: false
     })
     .disableNotifications()
     .version()
@@ -26,37 +26,37 @@ mix
      * ---------------------------------------- */
     // develop
     .less(
-        'poppy/mgr-page/resources/less/mgr-page.less',
+        'weiran/mgr-page/resources/less/mgr-page.less',
         'public/assets/libs/boot/style.css'
     )
     .scripts([
-            'poppy/mgr-page/resources/libs/poppy/util.js',
-            'poppy/mgr-page/resources/libs/poppy/cp.js',
-            'poppy/mgr-page/resources/libs/poppy/mgr-page/cp.js'
+            'weiran/mgr-page/resources/libs/weiran/util.js',
+            'weiran/mgr-page/resources/libs/weiran/cp.js',
+            'weiran/mgr-page/resources/libs/weiran/mgr-page/cp.js'
         ],
-        'public/assets/libs/boot/poppy.mgr.min.js'
+        'public/assets/libs/boot/weiran.mgr.min.js'
     )
     .scripts([
-            'poppy/mgr-page/resources/libs/boot/wangeditor@5.1.js',
+            'weiran/mgr-page/resources/libs/boot/wangeditor@5.1.js',
         ],
         'public/assets/libs/boot/wangeditor@5.1.js'
     )
     .scripts([
-            'poppy/mgr-page/resources/libs/jquery/2.2.4/jquery.min.js',
-            'poppy/mgr-page/resources/libs/jquery/form/jquery.form.js',
-            'poppy/mgr-page/resources/libs/jquery/pjax/jquery.pjax.js',
-            'poppy/mgr-page/resources/libs/jquery/poshytip/jquery.poshytip.js',
-            'poppy/mgr-page/resources/libs/jquery/validation/jquery.validation.js',
-            'poppy/mgr-page/resources/libs/jquery/drag-arrange/drag-arrange.js',
-            'poppy/mgr-page/resources/libs/tom-select/tom-select.complete.min.js',
-            'poppy/mgr-page/resources/libs/clipboard/clipboard.min.js'
+            'weiran/mgr-page/resources/libs/jquery/2.2.4/jquery.min.js',
+            'weiran/mgr-page/resources/libs/jquery/form/jquery.form.js',
+            'weiran/mgr-page/resources/libs/jquery/pjax/jquery.pjax.js',
+            'weiran/mgr-page/resources/libs/jquery/poshytip/jquery.poshytip.js',
+            'weiran/mgr-page/resources/libs/jquery/validation/jquery.validation.js',
+            'weiran/mgr-page/resources/libs/jquery/drag-arrange/drag-arrange.js',
+            'weiran/mgr-page/resources/libs/tom-select/tom-select.complete.min.js',
+            'weiran/mgr-page/resources/libs/clipboard/clipboard.min.js'
         ],
         'public/assets/libs/boot/vendor.min.js'
     )
-    .copyDirectory('poppy/mgr-page/resources/font/', 'public/assets/font/')
-    .copyDirectory('poppy/mgr-page/resources/images/', 'public/assets/images/')
-    .copyDirectory('poppy/mgr-page/resources/libs/jquery/', 'public/assets/libs/jquery/')
-    .copyDirectory('poppy/mgr-page/resources/libs/easy-web/', 'public/assets/libs/easy-web')
-    .copyDirectory('poppy/mgr-page/resources/libs/layui/', 'public/assets/libs/layui')
-    .copyDirectory('poppy/mgr-page/resources/libs/vue/', 'public/assets/libs/vue')
-    .copyDirectory('poppy/mgr-page/resources/libs/underscore/', 'public/assets/libs/underscore');
+    .copyDirectory('weiran/mgr-page/resources/font/', 'public/assets/font/')
+    .copyDirectory('weiran/mgr-page/resources/images/', 'public/assets/images/')
+    .copyDirectory('weiran/mgr-page/resources/libs/jquery/', 'public/assets/libs/jquery/')
+    .copyDirectory('weiran/mgr-page/resources/libs/easy-web/', 'public/assets/libs/easy-web')
+    .copyDirectory('weiran/mgr-page/resources/libs/layui/', 'public/assets/libs/layui')
+    .copyDirectory('weiran/mgr-page/resources/libs/vue/', 'public/assets/libs/vue')
+    .copyDirectory('weiran/mgr-page/resources/libs/underscore/', 'public/assets/libs/underscore');

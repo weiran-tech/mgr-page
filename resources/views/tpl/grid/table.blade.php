@@ -184,7 +184,7 @@ layui.table.on('toolbar({!! $id !!}-filter)', function (obj) {
         let shade_close = $(this).attr('data-shade_close') !== 'false';
         let sp = new URLSearchParams({
             {!! $model_pk !!} : ids,
-            _iframe: 'poppy'
+            _iframe: 'weiran'
         })
         layer.open({
             type: 2,

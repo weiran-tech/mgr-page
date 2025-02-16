@@ -43,9 +43,9 @@ class Layout
 	/**
 	 * Add a filter to layout column.
 	 *
-	 * @param \Poppy\MgrPage\Classes\Form\Field $field
+	 * @param \Weiran\MgrPage\Classes\Form\Field $field
 	 */
-	public function addField(\Poppy\MgrPage\Classes\Form\Field $field)
+	public function addField(Weiran\MgrPage\Classes\Form\Field $field)
 	{
 		$this->current->add($field);
 	}

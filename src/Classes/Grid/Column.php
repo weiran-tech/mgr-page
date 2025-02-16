@@ -583,7 +583,7 @@ class Column
     public function action($action): self
     {
         if (!is_subclass_of($action, RowAction::class)) {
-            throw new InvalidArgumentException("Action class [$action] must be sub-class of [Poppy\System\Classes\Actions\GridAction]");
+            throw new InvalidArgumentException("Action class [$action] must be sub-class of [Weiran\System\Classes\Actions\GridAction]");
         }
 
         $grid = $this->grid;

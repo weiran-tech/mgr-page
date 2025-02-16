@@ -1,7 +1,7 @@
 {
-    "name" : "管理(Page)",
+    "name" : "Manage Page",
     "slug" : "mgr-page",
-    "type" : "poppy",
+    "type" : "weiran",
     "version" : "1.0",
     "order" : 15,
     "description" : "页面管理模块(Layui)+开发平台"

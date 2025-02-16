@@ -7,6 +7,7 @@ namespace Weiran\MgrPage\Classes\Grid\Concerns;
 use Closure;
 use Illuminate\Contracts\Support\Renderable;
 use Weiran\MgrPage\Classes\Grid;
+use Weiran\MgrPage\Classes\Grid\Displayer\Actions;
 use Weiran\MgrPage\Classes\Operations;
 
 trait HasActions
@@ -60,7 +61,7 @@ trait HasActions
             return $this->actionsClass;
         }
 
-        return \Poppy\MgrPage\Classes\Grid\Displayer\Actions::class;
+        return Actions::class;
     }
 
     /**
@@ -70,7 +71,7 @@ trait HasActions
      */
     public function setActionClass(string $actionClass)
     {
-        if (is_subclass_of($actionClass, \Poppy\MgrPage\Classes\Grid\Displayer\Actions::class)) {
+        if (is_subclass_of($actionClass, Actions::class)) {
             $this->actionsClass = $actionClass;
         }
 

@@ -1168,7 +1168,7 @@ class Field implements Renderable
      */
     protected function sanitizeInput($input, $column)
     {
-        if ($this instanceof \Poppy\MgrPage\Classes\Form\Field\MultipleSelect) {
+        if ($this instanceof \Weiran\MgrPage\Classes\Form\Field\MultipleSelect) {
             $value = Arr::get($input, $column);
             Arr::set($input, $column, array_filter((array) $value));
         }

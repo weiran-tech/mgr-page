@@ -6,7 +6,7 @@ namespace Weiran\MgrPage;
 
 
 use Illuminate\Console\Scheduling\Schedule;
-use Weiran\Framework\Events\PoppySchedule;
+use Weiran\Framework\Events\WeiranSchedule;
 use Weiran\Framework\Exceptions\ModuleNotFoundException;
 use Weiran\Framework\Support\WeiranServiceProvider;
 use Weiran\MgrPage\Classes\FormBuilder;
@@ -73,7 +73,7 @@ class ServiceProvider extends WeiranServiceProvider
 
     private function registerSchedule(): void
     {
-        app('events')->listen(PoppySchedule::class, function (Schedule $schedule) {
+        app('events')->listen(WeiranSchedule::class, function (Schedule $schedule) {
 
         });
     }

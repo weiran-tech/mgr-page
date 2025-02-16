@@ -15,12 +15,12 @@
         {!! Form::label('guard', '角色组', ['class' => 'layui-form-label strong validation']) !!}
         <div class="layui-input-block">
             @if (isset($item))
-                {!!Form::select('guard', \Poppy\System\Models\PamAccount::kvType(),  $item->type,[
+                {!!Form::select('guard', Weiran\System\Models\PamAccount::kvType(),  $item->type,[
                     'readonly' => 'readonly',
                     'disabled' => 'disabled',
                 ])!!}
             @else
-                {!!Form::select('guard', \Poppy\System\Models\PamAccount::kvType(), Request::input('type'),[
+                {!!Form::select('guard', Weiran\System\Models\PamAccount::kvType(), Request::input('type'),[
                     'class'=>'layui-input'])!!}
             @endif
             <small class="layui-word-aux">

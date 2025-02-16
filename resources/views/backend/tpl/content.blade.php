@@ -11,7 +11,7 @@
     ])
 @endsection
 @section('body-class')
-    {!! input('_iframe') === 'poppy' ? 'layui-iframe' : '' !!}
+    {!! input('_iframe') === 'weiran' ? 'layui-iframe' : '' !!}
 @endsection
 @section('body-main')
     @include('weiran-mgr-page::tpl._toastr')

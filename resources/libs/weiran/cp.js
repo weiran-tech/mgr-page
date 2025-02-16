@@ -104,7 +104,7 @@
             let shade_close = $(this).attr('data-shade_close') !== 'false';
             let append = $this.attr('data-append');
             let data = Util.appendToObj(append);
-            data._iframe = 'poppy';
+            data._iframe = 'weiran';
             href = Util.objToUrl(data, href);
             layer.open({
                 type: 2,

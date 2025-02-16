@@ -32,7 +32,7 @@ trait HasQuickSearch
     /**
      * @param array|string|Closure
      *
-     * @return \Poppy\MgrPage\Classes\Grid\Tools\QuickSearch
+     * @return \Weiran\MgrPage\Classes\Grid\Tools\QuickSearch
      */
     public function quickSearch($search = null)
     {
@@ -43,7 +43,7 @@ trait HasQuickSearch
             $this->search = $search;
         }
 
-        return tap(new \Poppy\MgrPage\Classes\Grid\Tools\QuickSearch(), function ($search) {
+        return tap(new \Weiran\MgrPage\Classes\Grid\Tools\QuickSearch(), function ($search) {
             $this->tools->append($search);
         });
     }

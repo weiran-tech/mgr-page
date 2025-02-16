@@ -18,7 +18,7 @@ use Illuminate\View\View;
 use Weiran\Core\Classes\Traits\CoreTrait;
 use Weiran\Core\Exceptions\PermissionException;
 use Weiran\Framework\Classes\Resp;
-use Weiran\Framework\Classes\Traits\PoppyTrait;
+use Weiran\Framework\Classes\Traits\WeiranTrait;
 use Weiran\Framework\Exceptions\ApplicationException;
 use Weiran\Framework\Helper\EnvHelper;
 use Weiran\Framework\Helper\StrHelper;
@@ -38,7 +38,7 @@ use Weiran\System\Models\PamRole;
  */
 class HomeController extends BackendController
 {
-    use PoppyTrait, CoreTrait, UserSettingTrait;
+    use WeiranTrait, CoreTrait, UserSettingTrait;
 
     /**
      * 主页
