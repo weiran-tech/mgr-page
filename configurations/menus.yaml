@@ -1,7 +1,7 @@
 backend :
   title : 系统
   groups :
-    # 这里的KEY 作为注入项目 poppy.mgr-page/backend||setting, 可以将配置注入到这个地方
+    # 这里的KEY 作为注入项目 weiran.mgr-page/backend||setting, 可以将配置注入到这个地方
     setting :
       title : 系统设置
       icon : 'bi bi-gear'

@@ -30,7 +30,7 @@ class ServiceProvider extends WeiranServiceProvider
         // 注册 api 文档配置
         $this->publishes([
             __DIR__ . '/../resources/views/vendor/pagination-layui.blade.php' => resource_path('views/vendor/pagination/layui.blade.php'),
-        ], 'poppy');
+        ], 'weiran');
         $this->publishes([
             // 需要从项目中反向复制的页面
             __DIR__ . '/../resources/libs/boot/app.min.js'        => public_path('assets/libs/boot/app.min.js'),
@@ -45,7 +45,7 @@ class ServiceProvider extends WeiranServiceProvider
             __DIR__ . '/../resources/libs/layui/'                 => public_path('assets/libs/layui/'),
             __DIR__ . '/../resources/images/'                     => public_path('assets/images/'),
             __DIR__ . '/../resources/font/'                       => public_path('assets/font/'),
-        ], 'poppy-mix');
+        ], 'weiran-assets');
     }
 
     /**
@@ -67,7 +67,7 @@ class ServiceProvider extends WeiranServiceProvider
     public function provides(): array
     {
         return [
-            'poppy.mgr-page.form',
+            'weiran.mgr-page.form',
         ];
     }
 

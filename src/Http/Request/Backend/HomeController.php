@@ -124,7 +124,7 @@ class HomeController extends BackendController
 
     public function clearCache()
     {
-        $this->pyConsole()->call('poppy:optimize');
+        $this->pyConsole()->call('weiran:optimize');
         return Resp::success('已清空缓存');
     }
 
@@ -162,7 +162,7 @@ class HomeController extends BackendController
      * @param string     $path 地址
      * @param int|string $index
      */
-    public function setting(string $path = 'poppy.mgr-page', $index = 0)
+    public function setting(string $path = 'weiran.mgr-page', $index = 0)
     {
         return (new SettingView())->render($path, $index);
     }

@@ -13,7 +13,7 @@ class SettingSystem implements ServiceArray
 
     public function key(): string
     {
-        return 'poppy.mgr-page';
+        return 'weiran.mgr-page';
     }
 
     public function data(): array

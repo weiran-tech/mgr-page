@@ -1,8 +1,8 @@
 -
-  name: 'poppy.mgr-page.settings'
+  name: 'weiran.mgr-page.settings'
   hooks:
-    - '\Poppy\MgrPage\Hooks\MgrPage\SettingSystem'
+    - '\Weiran\MgrPage\Hooks\MgrPage\SettingSystem'
 -
-  name: 'poppy.mgr-page.html_js_vars'
+  name: 'weiran.mgr-page.html_js_vars'
   hooks:
-    - '\Poppy\MgrPage\Hooks\MgrPage\HtmlJsVar'
+    - '\Weiran\MgrPage\Hooks\MgrPage\HtmlJsVar'

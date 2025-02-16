@@ -16,6 +16,6 @@ class FormFacade extends IlluminateFacade
      */
     protected static function getFacadeAccessor()
     {
-        return 'poppy.mgr-page.form';
+        return 'weiran.mgr-page.form';
     }
 }
