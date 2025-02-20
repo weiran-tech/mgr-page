@@ -5,12 +5,12 @@ declare(strict_types = 1);
 namespace Weiran\MgrPage\Http\MgrPage;
 
 use Illuminate\Http\Request;
+use Route;
 use Weiran\Framework\Classes\Resp;
 use Weiran\MgrPage\Classes\Widgets\FormWidget;
 use Weiran\System\Action\Pam;
-use Weiran\System\Http\Validation\PamConfirmedPasswordRequest;
+use Weiran\System\Http\Request\Web\Validation\AuthConfirmedPasswordRequest;
 use Weiran\System\Models\PamAccount;
-use Route;
 
 class FormPamPassword extends FormWidget
 {
@@ -35,8 +35,8 @@ class FormPamPassword extends FormWidget
             return Resp::error('演示模式下无法修改密码');
         }
 
-        /** @var PamConfirmedPasswordRequest $reqPwd */
-        $reqPwd = app(PamConfirmedPasswordRequest::class, [$request]);
+        /** @var AuthConfirmedPasswordRequest $reqPwd */
+        $reqPwd = app(AuthConfirmedPasswordRequest::class, [$request]);
         if ($Pam->setPassword($this->pam, $reqPwd['password'])) {
             return Resp::success('设置密码成功', '_top_reload|1');
         }

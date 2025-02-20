@@ -12,7 +12,7 @@ use Weiran\MgrPage\Classes\Widgets\FormWidget;
 use Weiran\System\Action\Pam;
 use Weiran\System\Classes\Contracts\PasswordContract;
 use Weiran\System\Classes\Traits\PamTrait;
-use Weiran\System\Http\Validation\PamConfirmedPasswordRequest;
+use Weiran\System\Http\Request\Web\Validation\AuthConfirmedPasswordRequest;
 use Weiran\System\Models\PamAccount;
 
 class FormPassword extends FormWidget
@@ -39,8 +39,8 @@ class FormPassword extends FormWidget
         if (sys_is_demo()) {
             return Resp::error('演示模式下无法修改密码');
         }
-        /** @var PamConfirmedPasswordRequest $reqPwd */
-        $reqPwd = app(PamConfirmedPasswordRequest::class, [$request]);
+        /** @var AuthConfirmedPasswordRequest $reqPwd */
+        $reqPwd = app(AuthConfirmedPasswordRequest::class, [$request]);
         if (!$Pam->setPassword($this->pam, $reqPwd['password'])) {
             return Resp::error($Pam->getError());
         }

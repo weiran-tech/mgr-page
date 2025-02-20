@@ -5,15 +5,15 @@ declare(strict_types = 1);
 namespace Weiran\MgrPage\Http\MgrPage;
 
 use Illuminate\Http\Request;
+use Route;
+use Throwable;
 use Weiran\Framework\Classes\Resp;
 use Weiran\Framework\Validation\Rule;
 use Weiran\MgrPage\Classes\Widgets\FormWidget;
 use Weiran\System\Action\Pam;
-use Weiran\System\Http\Validation\PamPasswordRequest;
+use Weiran\System\Http\Request\Web\Validation\AuthPasswordRequest;
 use Weiran\System\Models\PamAccount;
 use Weiran\System\Models\PamRole;
-use Route;
-use Throwable;
 
 class FormPamEstablish extends FormWidget
 {
@@ -60,8 +60,8 @@ class FormPamEstablish extends FormWidget
         $Pam = new Pam();
         if ($this->item) {
             if ($password) {
-                /** @var PamPasswordRequest $reqPwd */
-                $reqPwd = app(PamPasswordRequest::class, [$request]);
+                /** @var AuthPasswordRequest $reqPwd */
+                $reqPwd = app(AuthPasswordRequest::class, [$request]);
                 if (!$Pam->setPassword($this->item, $reqPwd->input('password'))) {
                     return Resp::error($Pam->getError());
                 }

@@ -4,14 +4,14 @@ namespace Weiran\MgrPage\Http\MgrPage;
 
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Validation\ValidationException;
+use Route;
 use Weiran\Framework\Classes\Resp;
 use Weiran\Framework\Validation\Rule;
 use Weiran\MgrPage\Classes\Widgets\FormWidget;
+use Weiran\MgrPage\Http\Request\Backend\Validation\RoleEstablishRequest;
 use Weiran\System\Action\Role;
-use Weiran\System\Http\Validation\PamRoleRequest;
 use Weiran\System\Models\PamAccount;
 use Weiran\System\Models\PamRole;
-use Route;
 
 class FormRoleEstablish extends FormWidget
 {
@@ -46,7 +46,7 @@ class FormRoleEstablish extends FormWidget
     {
         $Role = (new Role());
         $Role->setPam(request()->user());
-        $validated = app(PamRoleRequest::class, [$request])->validated();
+        $validated = app(RoleEstablishRequest::class, [$request])->validated();
         if ($Role->establish($validated, $this->id)) {
             return Resp::success('操作成功', '_top_reload|1;id|' . $Role->getRole()->id);
         }

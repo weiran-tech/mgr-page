@@ -29,7 +29,7 @@ use Weiran\System\Action\Pam;
 use Weiran\System\Classes\PySystemDef;
 use Weiran\System\Classes\Traits\UserSettingTrait;
 use Weiran\System\Events\BePamLogoutEvent;
-use Weiran\System\Http\Validation\PamLoginRequest;
+use Weiran\System\Http\Request\Web\Validation\AuthLoginRequest;
 use Weiran\System\Models\PamAccount;
 use Weiran\System\Models\PamRole;
 
@@ -77,8 +77,8 @@ class HomeController extends BackendController
         ]);
 
         if (is_post()) {
-            /** @var PamLoginRequest $request */
-            $request      = app(PamLoginRequest::class, [$req]);
+            /** @var AuthLoginRequest $request */
+            $request      = app(AuthLoginRequest::class, [$req]);
             $reqPassport  = $request->scene('passport')->validated();
             $isMobile     = UtilHelper::isMobile($reqPassport['passport']);
             $Pam          = new Pam();
