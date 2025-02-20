@@ -20,7 +20,7 @@ class FormSettingSite extends FormSettingBase
     {
         $this->text('name', '网站名称')->rules([
             Rule::required(),
-        ])->placeholder('请输入网站名称')->default('罂粟网络');
+        ])->placeholder('请输入网站名称')->default('蔚然网络');
         $this->text('title', '网站标题')->rules([
             Rule::nullable(),
         ])->placeholder('请输入网站标题, 将显示在标题栏中');
