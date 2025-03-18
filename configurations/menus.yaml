@@ -1,5 +1,6 @@
-backend :
+-
   title : 系统
+  type : backend
   groups :
     # 这里的KEY 作为注入项目 weiran.mgr-page/backend||setting, 可以将配置注入到这个地方
     setting :
@@ -52,8 +53,9 @@ backend :
               param :
                 _scope : 'user'
               permission : backend:weiran-system.pam.manage
-develop :
+-
   title : 核心开发
+  type : develop
   groups :
     -
       title : 系统信息
