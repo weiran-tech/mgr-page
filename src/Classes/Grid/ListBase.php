@@ -5,7 +5,6 @@ declare(strict_types = 1);
 namespace Weiran\MgrPage\Classes\Grid;
 
 use Closure;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -99,7 +98,7 @@ abstract class ListBase implements ListContract
      *
      * @return Column
      */
-    public function __call(string $method, array $parameters)
+    public function __call($method, $parameters)
     {
         if (static::hasMacro($method)) {
             return $this->macroCall($method, $parameters);
@@ -288,7 +287,7 @@ abstract class ListBase implements ListContract
 
     /**
      * 当前的数据模型
-     * @return Model|\Weiran\MgrPage\Classes\Grid\Model
+     * @return Model
      */
     private function model()
     {
